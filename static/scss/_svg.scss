@@ -1,0 +1,6 @@
+// '%23"+$color+"'
+
+@function name() {
+  $url: "";
+  @return url($url);
+}

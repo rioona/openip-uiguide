@@ -1,0 +1,35 @@
+.app {
+  width: 100%;
+}
+.wrap {
+  width: 100%;
+  // transition: all 400ms ease;
+}
+.inner{
+  @include setCont(100%, null, block, relative);
+  max-width: $pc;
+  margin: 0 auto;
+}
+br{
+  &.mobile{
+    display: block;
+    @include tablet {
+      display: none;
+    }
+  }
+  &.tablet{
+    display: none  !important;;
+    @include tablet {
+      display: block !important;
+    }
+  }
+}
+header {
+  width: 100%;
+  display: flex;
+  .left, .right, .center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
