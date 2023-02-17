@@ -30,9 +30,8 @@ html {
 }
 
 body {
-  min-height: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
 }
 .app {
   width: 100%;
@@ -100,9 +99,9 @@ iframe {
 }
 input[type="text"],input[type="password"],input[type="tel"],input[type="email"],input[type="button"],input[type="submit"],input[type="reset"],button, select,textarea {
   @include fontfamily(400);
-  font-size: $pc_font;
+  font-size: $font;
   box-sizing: border-box;
-  // padding: 0;
+  padding: 0 10px;
   &::placeholder {
     color: #969696;
   }
@@ -114,12 +113,12 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
   -webkit-text-fill-color: $black !important;
 }
 button{
-  font-size: $pc_font;
+  font-size:$font;
   // line-height: 1;
   padding: 0;
 }
 textarea {
-  font-size: $pc_font;
+  font-size:$font;
   line-height: 1.5;
   padding: 0;
 }
@@ -145,9 +144,10 @@ a.dis {
   margin: 0px !important;
   text-indent: 2000em;
 }
+
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 } /* 스크롤 바 */
 ::-webkit-scrollbar-track {
   background-color: #dfdfdf;
@@ -457,3 +457,25 @@ div, section, article, ol, ul,p{
 .pb60 {
   padding-bottom: 60px !important;
 }
+//font
+.f10 {font-size: 10px !important;}
+.f11 {font-size: 11px !important;}
+.f12 {font-size: 12px !important;}
+.f13 {font-size: 13px !important;}
+.f14 {font-size: 14px !important;}
+.f15 {font-size: 15px !important;}
+.f16 {font-size: 16px !important;}
+.f17 {font-size: 17px !important;}
+.f18 {font-size: 18px !important;}
+.f19 {font-size: 19px !important;}
+.f20 {font-size: 20px !important;}
+.f21 {font-size: 21px !important;}
+.f22 {font-size: 22px !important;}
+.f23 {font-size: 23px !important;}
+.f24 {font-size: 24px !important;}
+.f25 {font-size: 25px !important;}
+.f26 {font-size: 26px !important;}
+.f27 {font-size: 27px !important;}
+.f28 {font-size: 28px !important;}
+.f29 {font-size: 29px !important;}
+.f30 {font-size: 30px !important;}

@@ -1,8 +1,15 @@
+h1{font-size: 24px;}
+h2{font-size: 20px;}
+h3{font-size: 18px;}
+h4{font-size: 16px;}
+h5{font-size: 14px;}
+h6{font-size: 12px;}
+
 .ellipsis {
   @include ellipsis;
 }
 .ellipsis2 {
-  @include ellipsis("multi", 2);
+  @include ellipsis("multi");
 }
 .ellipsis3 {
   @include ellipsis("multi", 3);
@@ -14,45 +21,29 @@
 .txt_black {
   color: $black !important;
 }
+
 .txt_white {
   color: $white !important;
 }
-
-.f10 {
-  @include font(10);
+.txt_red {
+  color: #DD4848 !important;
 }
-.f11 {
-  @include font(11);
+.txt_blue {
+  color: #3076CB !important;
 }
-.f12 {
-  @include font(12);
+.ui_txt_org{
+  color:#fbc831 !important;
 }
-.f13 {
-  @include font(13);
-}
-.f14 {
-  @include font(14);
-}
-.f15 {
-  @include font(15);
-}
-.f16 {
-  @include font(16);
-}
-.f17 {
-  @include font(17);
-}
-.f18 {
-  @include font(18);
-}
-.f19 {
-  @include font(19);
-}
-.f20 {
-  @include font(20);
+.txt_gray {
+  color: #666 !important;
 }
 
-.col2,.col3,.col4,.col5,.colb,.coln {
+.bg_gray{
+  background-color: #efefef !important;
+}
+
+
+.col2,.col3,.col4,.col5{
   display: flex !important;
   &.wrap{
     flex-wrap: wrap;
@@ -81,9 +72,62 @@
     width: 20%;
   }
 }
-.colr {
+
+//flex
+.flex_center {
+  display: flex;
+  justify-content: center;
+}
+.flex_right {
+  display: flex;
   justify-content: flex-end;
 }
-.colb {
+.flex_bw {
+  display: flex;
   justify-content: space-between;
+}
+
+.half{
+  width: calc(50% - 2.5px) !important;
+}
+.full{
+  width: 100% !important;
+}
+
+.btn, a.btn{
+  @include font(14, 14);
+  display: inline-block;
+  width: auto;
+  min-width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding: 0 15px 0;
+  border-radius: 5px;
+  background-color: $black;
+  color: $white;
+  flex-shrink: 0;
+  vertical-align: middle;
+  &.l_black{
+    background-color: $white;
+    border: 1px solid $black;
+    color: $black;
+  }
+}
+.btn_close{
+  @include setCont(20px, 20px, block, relative);
+  @include blind;
+}
+.btn_search{
+  @include setCont(20px, 20px, block, relative);
+  @include blind;
+}
+input.ipt{
+  @include setCont(100%, 30px, block);
+  @include font(14, 14);
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  &::placeholder{
+    color: #666;
+  }
 }

@@ -75,24 +75,7 @@ module.exports = {
         config.devtool = 'source-map'
       }
     },
-    filenames: {
-      css:  process.env.NODE_ENV === 'production' ? 'css/[name].css' : '[name].css',
-    },
-    // extractCSS: process.env.NODE_ENV === 'production' ? true : false,
-    extractCSS: true,
-    optimization: {
-      splitChunks: {
-        cacheGroups: {
-          styles: {
-            name: 'styles',
-            test: /\.(css|vue)$/,
-            chunks: 'all',
-            enforce: true
-          }
-        }
-      }
-    },
-    // extractCSS: process.env.NODE_ENV === "production" ? true : false,
+    extractCSS: process.env.NODE_ENV === 'production' ? true : false,
     postcss: {
       plugins: {
         autoprefixer: {

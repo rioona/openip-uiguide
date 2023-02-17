@@ -100,9 +100,11 @@
   content: "";
 }
 
-@mixin setCont(  $width: auto,  $display: null,  $position: null,  $color: null) {
+@mixin setCont(  $width: null, $height: null,  $display: null,  $position: null,  $color: null) {
   content: "";
-  width: $width;
+  @if $width != null {
+    width: $width;
+  }
   @if $height != null {
     height: $height;
   }
@@ -129,7 +131,7 @@
 //   transition-timing-function: cubic-bezier(0.12, 0.7, 0.29, 0.88);
 // }
 
-@mixin center {
+@mixin allCenter {
   justify-content: center;
   align-items: center;
 }
