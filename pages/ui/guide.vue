@@ -337,6 +337,14 @@
                   { name: '셀렉트3' },
                   { name: '셀렉트4' },
                 ]"/>
+              <Select defaultTitle="비활성화" classNm="dis mt5"
+                :itemList="[
+                  { name: '셀렉트1' },
+                  { name: '셀렉트2'},
+                  // { name: '셀렉트2', select:true},
+                  { name: '셀렉트3' },
+                  { name: '셀렉트4' },
+                ]"/>
               <h5>Select - 라우터 이동</h5>
               <Select defaultTitle="라우터" classNm="mt5"
               :itemList="[

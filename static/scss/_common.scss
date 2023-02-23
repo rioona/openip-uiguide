@@ -139,8 +139,8 @@ h6{font-size: 12px;}
     color: #666;
   }
   &:disabled, &.dis{
-    background-color: #aaa;
-    color: #d6d6d6;
+    background-color: #f0f0f0;
+    color: #aaa;
     &:hover{
       opacity: 1;
     }
@@ -342,10 +342,14 @@ input.ipt{
       border-color: #aaa;
     }
   }
-  &.disabled {
+  &.dis {
     .s_tit {
       background-color: #f0f0f0;
       border: 1px solid #d7d7d7;
+      color: #aaa;
+      &:after{
+        @include bgSvg(arrDown("aaa"), no-repeat, 0 50%, 10px auto);
+      }
     }
   }
   // &.type1{
@@ -551,6 +555,23 @@ input.ipt{
   }
   .radio, .chk{
     display: none;
+    &:disabled + label {
+      color: #aaa;
+      &::before{
+        background-color: #f0f0f0;
+        border: 2px solid #d7d7d7;
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+    &:checked {
+      &:disabled + label {
+        &::before{
+          border: 2px solid #d7d7d7;
+        }
+      }
+    }
   }
 }
 .bx_chk {
@@ -561,19 +582,10 @@ input.ipt{
         border: 2px solid #3076CB;
       }
     }
-    &:disabled + label {
-      &::before{
-        background-color: #cfcfcf;
-      }
-      &:hover{
-        opacity: 1;
-      }
-    }
     &:checked {
       &:disabled + label {
         &::before{
-          @include bgSvg(chk("666"), no-repeat, 50% 50%, 8px auto, #cfcfcf);
-          border: 2px solid #aaa;
+          @include bgSvg(chk("aaa"), no-repeat, 50% 50%, 8px auto, #f0f0f0);
         }
       }
     }
@@ -611,22 +623,10 @@ input.ipt{
         z-index: 3;
       }
     }
-    &:disabled + label {
-      &::before{
-        background-color: #cfcfcf;
-      }
-      &:hover{
-        opacity: 1;
-      }
-    }
     &:checked {
       &:disabled + label {
-        &::before{
-          @include bgSvg(chk("666"), no-repeat,  50% 50%, 8px auto, #cfcfcf);
-          border: 2px solid #aaa;
-        }
         &::after{
-          background-color: #999;
+          background-color: #aaa;
         }
       }
     }
