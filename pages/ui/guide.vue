@@ -30,19 +30,19 @@
               padding-left : ex) .ml10 (padding-left 10px)<br/>
               padding-right : ex) .mr50 (padding-right 50px)<br/>
             </div>
-             <h3 class="ui_h3">폰트 크기 스타일</h3>
+            <h3 class="ui_h3">폰트 크기 스타일</h3>
             <div class="g_cont">
-             <p>
-               <span>글꼴 : mac(애플고딕), 윈도우(맑은고딕)</span>
-             </p>
-             <p>
-               <span>기본 글꼴 크기 : 14px</span>
-             </p>
-             <p>
-               <span>기본 글자 색상 : #006</span>
-             </p>
+              <p>
+                <span>글꼴 : mac(애플고딕), 윈도우(맑은고딕)</span>
+              </p>
+              <p>
+                <span>기본 글꼴 크기 : 14px</span>
+              </p>
+              <p>
+                <span>기본 글자 색상 : #006</span>
+              </p>
             </div>
-             <h3 class="ui_h3">폰트 사이즈</h3>
+            <h3 class="ui_h3">폰트 사이즈</h3>
             <div class="g_cont">
               폰트 사이즈 10px ~ 30px까지 클래스(f10~f30)가 있습니다<br/>
               <span class="f10">ex) .f10 : 폰트 사이즈 10px</span>
@@ -389,6 +389,21 @@
           </div>
         </div>
       </article>
+      <article class="ui_area" id="ui_area2">
+        <h2 class="ui_h2 mb20">🎯 팝업, 툴팁 가이드</h2>
+        <div class="col2">
+          <div class="col">
+            <h3 class="ui_h3">툴팁 : .tooltip</h3>
+            <div class="g_cont" style="min-height:500px;">
+              <Tooltip type="?" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
+              <Tooltip type="!" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
+            </div>
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
+      </article>  
     </section>
 
     <!-- 
@@ -627,7 +642,7 @@
 import Select from "~/components/form/Select";
 import CheckBox from "~/components/form/CheckBox";
 import RadioBox from "~/components/form/RadioBox";
-// import InputBox from "~/components/common/Input";
+import Tooltip from "~/components/common/Tooltip";
 // import SelectSearch from "~/components/common/SelectSearch";
 // import CreatePop from "~/components/popup/Create";
 // import CsPop from "~/components/popup/Cs";
@@ -645,6 +660,7 @@ export default {
     Select,
     CheckBox,
     RadioBox,
+    Tooltip
     // InputBox,
     // SelectSearch,
     // CreatePop,
