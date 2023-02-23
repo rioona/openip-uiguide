@@ -150,6 +150,18 @@
                 <div class="item bg_gray">item3</div>
                 <div class="item bg_gray">item4</div>
               </div>
+              <div class="flex_a_center mt15">
+                <div class="item bg_gray">item1</div>
+                <div class="item bg_gray" style="height:50px;">item2</div>
+                <div class="item bg_gray">item3</div>
+                <div class="item bg_gray">item4</div>
+              </div>
+              <div class="flex_a_end mt15 bg_gray"  style="height:50px;">
+                <div class="item">item1</div>
+                <div class="item">item2</div>
+                <div class="item">item3</div>
+                <div class="item">item4</div>
+              </div>
             </div>
             <h3 class="ui_h3">단 나누기</h3>
             <div class="g_cont">
@@ -208,33 +220,165 @@
             <h3 class="ui_h3">버튼 : .btn - button, a태크에 사용</h3>
             <div class="g_cont">
               <p class="mb10">최소 가로값 : 60px, 세로 : 30px (line-height 30px), font : 14px,</p>
-              <button class="btn">기본버튼</button>
-              <button class="btn">.btn</button>
+              <button type="button" class="btn">기본버튼</button>
+              <button type="button" class="btn">.btn</button>
               <nuxt-link to="" class="btn">a.btn</nuxt-link>
+              <nuxt-link to="" class="btn gray">a.btn.gray</nuxt-link>
               <div class="mt10">
-                <button class="btn l_black">라인 버튼</button>
-                <button class="btn l_black">.btn.l_black</button>
-                <nuxt-link to="" class="btn l_black">.btn.l_black</nuxt-link>
-                <nuxt-link to="" class="btn l_black">.a.l_black</nuxt-link>
+                <nuxt-link to="" class="btn dis">a.btn.dis</nuxt-link>
+                <button type="button" class="btn" disabled="disabled">button disabled 속성</button>
+              </div>
+              <div class="mt10">
+                <button type="button" class="btn l_gray">라인 버튼 .btn.l_black</button>
+                <button type="button" class="btn l_blue">.btn.l_blue</button>
+                <nuxt-link to="" class="btn l_gray">a.btn.l_gray</nuxt-link>
+                <nuxt-link to="" class="btn l_blue">a.btn.l_blue</nuxt-link>
               </div>
               <div class="mt5 mb5 flex_bw">
-                <button class="btn half">.btn.half</button>
+                <button type="button" class="btn half">.btn.half</button>
                 <nuxt-link to="" class="btn half">.a.half</nuxt-link>
               </div>
               <div class="mb5">
-                <button class="btn l_black full">.btn.full</button>
+                <button type="button" class="btn l_black full">.btn.full</button>
               </div>
-              <button class="btn_close">닫기 버튼</button>
-              <button class="btn_search">검색 버튼</button>
             </div>
+            <h3 class="ui_h3">아이콘 버튼 : .btn_sign + 해당 버튼 클래스 - button, a태크에 사용</h3>
+            <div class="g_cont">
+              <p class="mb10">
+                프로젝트 마다 같은 클래스에 커스텀(재정의) 하여 사용하세요<br/>
+                .btn_sign 아이콘 버튼 기본 클래스로 글자 제거 및 기본 크기 20px로
+                아이콘 버튼을 새로 만드는 경우에도 사용해주세요.
+                아이콘 크기는 변경할 수 있으나 색상 및 이미지 변경은 새로 svg를 추가하여 사용해야합니다.
+              </p>
+              <div>
+                <p>아이콘 버튼 클래스에 .c_white 추가하면, 흰색에 파란색 버튼 사용가능</p>
+                <div class="flex_a_center mt5">
+                  .btn_search.btn_sign : <button type="button" class="btn_search btn_sign">검색 버튼</button> <button type="button" class="btn_search c_white btn_sign"></button> 
+                  <span class="ml5"> 비활성화</span> 
+                  <button type="button" class="btn_search btn_sign" disabled="disabled">검색 버튼</button>
+                  <nuxt-link to="" class="btn_search c_white btn_sign dis"></nuxt-link>
+                </div>
+                <div class="flex_a_center mt5">
+                  .btn_reset.btn_sign : <button type="button" class="btn_reset btn_sign">새로고침 버튼</button>
+                  <button type="button" class="btn_reset c_white btn_sign">검색 버튼</button>
+                  <span class="ml5"> 비활성화</span> 
+                  <button type="button" class="btn_reset btn_sign" disabled="disabled">새로고침 버튼</button>
+                  <nuxt-link to="" class="btn_reset c_white btn_sign dis">새로고침 버튼</nuxt-link>
+                </div>
+                <div class="flex_a_center mt5">
+                  .btn_close.btn_sign : <button type="button" class="btn_close btn_sign">닫기 버튼</button> 
+                  <button type="button" class="btn_close c_white btn_sign">닫기 버튼</button> 
+                  <span class="ml5"> 비활성화</span> 
+                  <button type="button" class="btn_close btn_sign" disabled="disabled">닫기 버튼</button> 
+                  <nuxt-link to="" class="btn_close c_white btn_sign dis">닫기 버튼</nuxt-link>
+                </div>
+                <div class="flex_a_center mt5">
+                  .btn_add.btn_sign : <button type="button" class="btn_add btn_sign">더하기 버튼</button>
+                  <button type="button" class="btn_add c_white btn_sign">더하기 버튼</button>
+                  <span class="ml5"> 비활성화</span> 
+                  <button type="button" class="btn_add btn_sign" disabled="disabled">더하기 버튼</button>
+                  <nuxt-link to="" class="btn_add c_white btn_sign dis">더하기 버튼</nuxt-link>
+                </div>
+                <div class="flex_a_center mt5">
+                  .btn_subt.btn_sign : 
+                  <button type="button" class="btn_subt btn_sign">빼기 버튼</button>
+                  <button type="button" class="btn_subt c_white btn_sign">빼기 버튼</button>
+                  <span class="ml5"> 비활성화</span> 
+                  <button type="button" class="btn_subt btn_sign" disabled="disabled">빼기 버튼</button>
+                  <nuxt-link to="" class="btn_subt c_white btn_sign dis">빼기 버튼</nuxt-link>
+                </div>
+                <div class="flex_a_center mt5">
+                  .btn_down.btn_sign : <button type="button" class="btn_down btn_sign">아래 버튼</button>
+                  <button type="button" class="btn_down c_white btn_sign">아래 버튼</button>
+                  <span class="ml5"> 비활성화</span> 
+                  <button type="button" class="btn_down btn_sign" disabled="disabled">아래 버튼</button>
+                  <nuxt-link to="" class="btn_down c_white btn_sign dis">아래 버튼</nuxt-link>
+                </div>   
+                <div class="flex_a_center mt5">
+                  .btn_prev.btn_sign : <button type="button" class="btn_prev btn_sign">이전 버튼</button>
+                  <button type="button" class="btn_prev c_white btn_sign">이전 버튼</button>
+                  <span class="ml5"> 비활성화</span> 
+                  <button type="button" class="btn_prev btn_sign" disabled="disabled">이전 버튼</button>
+                  <nuxt-link to="" class="btn_prev c_white btn_sign dis">이전 버튼</nuxt-link>
+                </div>
+                <div class="flex_a_center mt5">
+                  .btn_next.btn_sign : <button type="button" class="btn_next btn_sign">다음 버튼</button>
+                  <button type="button" class="btn_next c_white btn_sign">다음 버튼</button>
+                  <span class="ml5"> 비활성화</span> 
+                  <button type="button" class="btn_next btn_sign" disabled="disabled">다음 버튼</button>
+                  <nuxt-link to="" class="btn_next c_white btn_sign dis">다음 버튼</nuxt-link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
             <h3 class="ui_h3">input - 기본 타입</h3>
             <div class="g_cont">
               <p class="mb5"><b>.ipt</b> : 가로값 100%, 선색상 #aaa, placeholder #666</p>
               <input type="text" class="ipt" placeholder="입력하세요"/>
               <input type="text" class="ipt mt5" value="값"/>
+              <div class="bx_search mt10">
+                <input type="text" class="ipt"/>
+                <button class="btn_search btn_sign">검색버튼</button>
+              </div>
+            </div>
+            <h3 class="ui_h3">select</h3>
+            <div class="g_cont">
+              <p class="mb20">
+                Select components 기본 텍스트는 title에 넣어주세요. 없는 경우
+                생략<br/>
+                가로값은 기본 100% width에 px or %으로 넣으면 조정 가능
+              </p>
+              <Select defaultTitle="선택해주세요"
+                :itemList="[
+                  { name: '셀렉트1' },
+                  { name: '셀렉트2'},
+                  // { name: '셀렉트2', select:true},
+                  { name: '셀렉트3' },
+                  { name: '셀렉트4' },
+                ]"/>
+              <h5>Select - 라우터 이동</h5>
+              <Select defaultTitle="라우터" classNm="mt5"
+              :itemList="[
+                // { name: '라우터1' , to:'/ui' , target:'_blank' },
+                { name: '라우터1' , to:'/ui' },
+                { name: '라우터2' , to:'/ui' },
+                { name: '라우터3' , to:'/ui' },
+                { name: '라우터4' , to:'/ui' },
+                { name: '라우터5' , to:'/ui' },
+              ]"/>
+              <h5>Select - 타 사이트 이동</h5>
+              <Select defaultTitle="링크" classNm="mt5"
+                :itemList="[
+                  { name: '링크1' , link:'https://www.naver.com/' , target:'_blank' },
+                  { name: '링크2' , link:'https://www.naver.com/' , target:'_blank' },
+                  { name: '링크3' , link:'https://www.naver.com/' , target:'_blank' },
+                  { name: '링크4' , link:'https://www.naver.com/' , target:'_blank' },
+                ]"/>
+            </div>
+            <h3 class="ui_h3">CheckBox</h3>
+            <div class="g_cont">
+              <div>
+                <CheckBox label="체크박스1" id="chk1_1"/>
+                <CheckBox label="체크박스2" id="chk1_2" :value="true"/>
+                <CheckBox label="체크박스3" id="chk1_3" :disabled="true"/>
+                <CheckBox label="체크박스4" id="chk1_4" :value="true" :disabled="true"/>
+              </div>
+              <div class="mt5">
+                <CheckBox label="체크박스1" id="chk2_1" classNm="t_round"/>
+                <CheckBox label="체크박스2" id="chk2_2" classNm="t_round" :value="true"/>
+                <CheckBox label="체크박스3" id="chk2_3" classNm="t_round" :disabled="true"/>
+                <CheckBox label="체크박스4" id="chk2_4" classNm="t_round" :value="true" :disabled="true"/>
+              </div>
+            </div>
+            <h3 class="ui_h3">RadioBox</h3>
+            <div class="g_cont">
+              <RadioBox label="라디오박스1" id="1" group="radi1"/>
+              <RadioBox label="라디오박스2" id="2" group="radi1" :value="true"/>
+              <RadioBox label="라디오박스3" id="1" group="radi2" :disabled="true"/>
+              <RadioBox label="라디오박스4" id="2"  group="radi2" :value="true" :disabled="true"/>
             </div>
           </div>
-          <div class="col"></div>
         </div>
       </article>
     </section>
@@ -248,35 +392,35 @@
           <div class="g_cont">
              <h3 class="ui_h3">DEFAULT BUTTONS</h3>
             <p></p>
-            <button class="btn full">.btn.full</button><br>
-            <button class="btn">.btn</button>
-            <button class="btn sky">.btn.sky</button>
-            <button class="btn red">.btn.red</button>
-            <button class="btn dark">.btn.dark</button>
-            <button class="btn dis">.btn.dis</button>
-            <button class="btn sm">.btn.sm</button>
+            <button type="button" class="btn full">.btn.full</button><br>
+            <button type="button" class="btn">.btn</button>
+            <button type="button" class="btn sky">.btn.sky</button>
+            <button type="button" class="btn red">.btn.red</button>
+            <button type="button" class="btn dark">.btn.dark</button>
+            <button type="button" class="btn dis">.btn.dis</button>
+            <button type="button" class="btn sm">.btn.sm</button>
           </div>
           <div class="g_cont">
              <h3 class="ui_h3">OUTLINE BUTTONS</h3>
-            <button class="btn l_blue">.btn.l_blue</button>
-            <button class="btn l_sky">.btn.l_sky</button>
-            <button class="btn l_red">.btn.l_red</button>
-            <button class="btn l_dark">.btn.l_dark</button>
-            <button class="btn l_dis">.btn.l_dis</button>
+            <button type="button" class="btn l_blue">.btn.l_blue</button>
+            <button type="button" class="btn l_sky">.btn.l_sky</button>
+            <button type="button" class="btn l_red">.btn.l_red</button>
+            <button type="button" class="btn l_dark">.btn.l_dark</button>
+            <button type="button" class="btn l_dis">.btn.l_dis</button>
           </div>
           <div class="g_cont">
              <h3 class="ui_h3">ICON+BUTTONS</h3>
-            <button class="btn b_refresh"><b>.btn.b_refresh</b></button>
-            <button class="btn b_setting"><b>btn.b_setting</b></button>
-            <button class="btn b_cancel"><b>btn.b_cancel</b></button>
-            <button class="btn b_checked"><b>.btn.b_checked</b></button>
-            <button class="btn b_add"><b>.btn.b_add</b></button>
-            <button class="btn b_sub"><b>.btn.b_sub</b></button>
-            <button class="btn b_down"><b>.btn.b_down</b></button>
+            <button type="button" class="btn b_refresh"><b>.btn.b_refresh</b></button>
+            <button type="button" class="btn b_setting"><b>btn.b_setting</b></button>
+            <button type="button" class="btn b_cancel"><b>btn.b_cancel</b></button>
+            <button type="button" class="btn b_checked"><b>.btn.b_checked</b></button>
+            <button type="button" class="btn b_add"><b>.btn.b_add</b></button>
+            <button type="button" class="btn b_sub"><b>.btn.b_sub</b></button>
+            <button type="button" class="btn b_down"><b>.btn.b_down</b></button>
           </div>
           <div class="g_cont">
              <h3 class="ui_h3">ICON BUTTONS</h3>
-            <button class="btn_search type2">검색</button>
+            <button type="button" class="btn_search type2">검색</button>
           </div>
         </div>
         <div class="g_right">
@@ -284,21 +428,21 @@
              <h3 class="ui_h3">TAB</h3>
             <p class="mt20 mb5">.tabs1</p>
             <div class="tabs1">
-              <button class="tab on">TAB01</button>
-              <button class="tab">TAB02</button>
+              <button type="button" class="tab on">TAB01</button>
+              <button type="button" class="tab">TAB02</button>
             </div>
             <p class="mt20 mb5">.tabs2</p>
             <div class="tabs2">
-              <button class="tab on">TAB01</button>
-              <button class="tab">TAB02</button>
-              <button class="tab">TAB03</button>
-              <button class="tab">TAB04</button>
+              <button type="button" class="tab on">TAB01</button>
+              <button type="button" class="tab">TAB02</button>
+              <button type="button" class="tab">TAB03</button>
+              <button type="button" class="tab">TAB04</button>
             </div>
             <p class="mt20 mb5">.tabs3</p>
             <div class="tabs3">
-              <button class="tab">TAB01</button>
-              <button class="tab on">TAB02</button>
-              <button class="tab">TAB03</button>
+              <button type="button" class="tab">TAB01</button>
+              <button type="button" class="tab on">TAB02</button>
+              <button type="button" class="tab">TAB03</button>
             </div>
           </div>
         </div>
@@ -424,71 +568,6 @@
               }"
             />
           </div>
-          <div class="g_cont">
-             <h3 class="ui_h3">Select</h3>
-            <p class="mb20">
-              Select components 기본 텍스트는 title에 넣어주세요. 없는 경우
-              생략<br/>
-              가로값은 기본 100% width에 px or %으로 넣으면 조정 가능
-            </p>
-            <Select
-              title="선택해주세요."
-              :list="[
-                { name: '셀렉트1' },
-                { name: '셀렉트2' },
-                { name: '셀렉트3' },
-                { name: '셀렉트4' },
-              ]"
-            />
-            <Select
-              title="비활성화"
-              :list="[
-                { name: '셀렉트1' },
-                { name: '셀렉트2' },
-                { name: '셀렉트3' },
-                { name: '셀렉트4' },
-                { name: '셀렉트5' },
-                { name: '셀렉트6' },
-                { name: '셀렉트7' },
-                { name: '셀렉트8' },
-              ]"
-              classNm="disabled"
-            />
-            <h3 class="mt20">Search Select</h3>
-            <p class="mb20">
-              SelectSearch components 기본 텍스트는 select, input 각각 title에
-              넣어주세요. 없는 경우 생략<br/>
-              가로값은 기본 100% width에 px or %으로 넣으면 조정 가능
-            </p>
-            <SelectSearch
-              title="선택해주세요."
-              :list="[
-                { name: '셀렉트1' },
-                { name: '셀렉트1' },
-                { name: '셀렉트2' },
-                { name: '셀렉트3' },
-                { name: '셀렉트4' },
-                { name: '셀렉트5' },
-                { name: '셀렉트6' },
-                { name: '셀렉트7' },
-                { name: '셀렉트8' },
-              ]"
-              :data="{
-                placeholder: '검색어를 입력해 주세요.',
-              }"
-            />
-            <SelectSearch
-              :list="[
-                { name: '셀렉트1', select: true },
-                { name: '셀렉트2' },
-                { name: '셀렉트3' },
-              ]"
-              :data="{
-                placeholder: '검색어를 입력해 주세요.',
-              }"
-              classNm="disabled"
-            />
-          </div>
         </div>
       </div>
     </article>
@@ -501,22 +580,22 @@
               * 팝업 컴포먼트 사용시 부모요소로 꼭 &lt;transition ...&gt;를 녛어주세요.<br/>
               transition 태그로 에니메션 추가
             </p>
-            <button class="btn" @click="fnOpenPop(1)">
+            <button type="button" class="btn" @click="fnOpenPop(1)">
               상품 등록 팝업
             </button>
-            <button class="btn" @click="fnOpenPop(4)">
+            <button type="button" class="btn" @click="fnOpenPop(4)">
               상담내역 팝업
             </button>
-            <button class="btn" @click="fnOpenPop(5)">
+            <button type="button" class="btn" @click="fnOpenPop(5)">
               상담내역2 팝업 
             </button>
-            <button class="btn" @click="fnOpenPop(6)">
+            <button type="button" class="btn" @click="fnOpenPop(6)">
               상담내역3 팝업 <em class="new">new</em>
             </button>
-            <button class="btn" @click="fnOpenPop(2)">
+            <button type="button" class="btn" @click="fnOpenPop(2)">
               경고창
             </button>
-            <button class="btn" @click="fnOpenPop(3)">
+            <button type="button" class="btn" @click="fnOpenPop(3)">
               확인창
             </button>
             <transition 
@@ -537,10 +616,10 @@
 </template>
 
 <script>
+import Select from "~/components/form/Select";
+import CheckBox from "~/components/form/CheckBox";
+import RadioBox from "~/components/form/RadioBox";
 // import InputBox from "~/components/common/Input";
-// import CheckBox from "~/components/common/CheckBox";
-// import RadioBox from "~/components/common/RadioBox";
-// import Select from "~/components/common/Select";
 // import SelectSearch from "~/components/common/SelectSearch";
 // import CreatePop from "~/components/popup/Create";
 // import CsPop from "~/components/popup/Cs";
@@ -555,10 +634,10 @@ export default {
     };
   },
   components: {
+    Select,
+    CheckBox,
+    RadioBox,
     // InputBox,
-    // CheckBox,
-    // RadioBox,
-    // Select,
     // SelectSearch,
     // CreatePop,
     // CsPop,
@@ -608,7 +687,7 @@ export default {
 </script>
 <!-- 해당 페이지에서만 쓰는 css -->
 <style scoped v-if="true">
-  @import "//s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/guide.css?ㅍ=2";
+  @import "//s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/guide.css?v=2";
 </style>
 <!-- <style lang="scss" scoped v-if="true">
   @import "~/static/scss/variable.scss";

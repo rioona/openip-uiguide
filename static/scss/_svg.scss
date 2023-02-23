@@ -1,6 +1,34 @@
 // '%23"+$color+"'
 
-@function name() {
-  $url: "";
+@function chk($color) {
+  $url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8.25' viewBox='0 0 11 8.25'%3E%3Cg id='체크' transform='translate(1 1)'%3E%3Cpath id='체크-2' data-name='체크' d='M3.117,6.236l-.008.009.008-.009L0,2.678,3.117,6.236,9,0,3.117,6.236l.012.014Z' fill='none' stroke='%23"+$color+"' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A";
+  @return url($url);
+}
+@function icoRadio($color) {
+  $url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='8.25' viewBox='0 0 11 8.25'%3E%3Cg id='체크' transform='translate(1 1)'%3E%3Cpath id='체크-2' data-name='체크' d='M3.117,6.236l-.008.009.008-.009L0,2.678,3.117,6.236,9,0,3.117,6.236l.012.014Z' fill='none' stroke='%23"+$color+"' stroke-linejoin='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A";
+  @return url($url);
+}
+@function icoSearch($color) {
+  $url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.853' height='12.769' viewBox='0 0 11.853 12.769'%3E%3Cpath id='아이콘-검색' d='M-3411.355-223.359a4.479,4.479,0,0,1-2.645.859,4.5,4.5,0,0,1-4.5-4.5,4.5,4.5,0,0,1,4.5-4.5,4.5,4.5,0,0,1,4.5,4.5,4.5,4.5,0,0,1-1.855,3.641l3.859,3.77Z' transform='translate(3419 232)' fill='none' stroke='%23"+$color+"' stroke-width='1'/%3E%3C/svg%3E%0A";
+  @return url($url);
+}
+@function icoClose($color:000, $border:1) {
+  $url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.707' height='8.706' viewBox='0 0 8.707 8.706'%3E%3Cpath id='아이콘-취소' d='M-5642-234l-4,4,4-4-4-4,4,4,4-4-4,4,4,4Z' transform='translate(5646.354 238.355)' fill='none' stroke='%23"+$color+"' stroke-width='"+$border+"'/%3E%3C/svg%3E%0A";
+  @return url($url);
+}
+@function icoReset($color) {
+  $url: "data:image/svg+xml,%3Csvg id='아이콘-새로고침' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='11.997' height='11.82' viewBox='0 0 11.997 11.82'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='사각형_125' data-name='사각형 125' width='11.997' height='11.82' fill='%23"+$color+"'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='그룹_327' data-name='그룹 327' clip-path='url(%23clip-path)'%3E%3Cpath id='패스_24' data-name='패스 24' d='M10.939.507l.007,2.306a5.911,5.911,0,1,0,.736,4.371l-1.022-.224a4.864,4.864,0,1,1-.4-3.22l-2.543.007,0,1.046L12,4.78,11.985.5Z' transform='translate(0 0)' fill='%23"+$color+"'/%3E%3C/g%3E%3C/svg%3E%0A";
+  @return url($url);
+}
+@function icoAdd($color:000) {
+  $url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cline id='선_15' data-name='선 15' x2='10' transform='translate(0 4.5)' fill='none' stroke='%23"+$color+"' stroke-width='1'/%3E%3Cline id='선_17' data-name='선 17' y2='10' transform='translate(5)' fill='none' stroke='%23"+$color+"' stroke-width='1'/%3E%3C/svg%3E%0A";
+  @return url($url);
+}
+@function icoSubt($color:000) {
+  $url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='1' viewBox='0 0 10 1'%3E%3Cline id='선_15' data-name='선 15' x2='10' transform='translate(0 0.5)' fill='none' stroke='%23"+$color+"' stroke-width='1'/%3E%3C/svg%3E%0A";
+  @return url($url);
+}
+@function arrDown($color:000, $border:1) {
+  $url: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='5.2' viewBox='0 0 10 5.2'%3E%3Cpath id='합치기_' data-name='합치기 ' d='M4,3.2,8,0Zm0,0L0,0Z' transform='translate(1 1)' fill='none' stroke='%23"+$color+"' stroke-linecap='round' stroke-linejoin='round' stroke-width='"+$border+"'/%3E%3C/svg%3E%0A";
   @return url($url);
 }

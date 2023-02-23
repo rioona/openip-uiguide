@@ -107,5 +107,5 @@ export default {
 </script>
 <!-- 해당 페이지에서만 쓰는 css -->
 <style scoped v-if="true">
-  /* @import "//s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/guide.css?ㅍ=1"; */
+  @import "//s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/guide.css?ㅍ=1";
 </style>
