@@ -26,10 +26,10 @@ h6{font-size: 12px;}
   color: $white !important;
 }
 .txt_red {
-  color: #DD4848 !important;
+  color: #e02d1b !important;
 }
 .txt_blue {
-  color: #3076CB !important;
+  color: #2e59d9 !important;
 }
 .ui_txt_org{
   color:#fbc831 !important;
@@ -37,7 +37,6 @@ h6{font-size: 12px;}
 .txt_gray {
   color: #666 !important;
 }
-
 .bg_gray{
   background-color: #efefef !important;
 }
@@ -104,39 +103,211 @@ h6{font-size: 12px;}
   width: 100% !important;
 }
 
+p.ui_point{
+  font-weight: 600;
+  font-size: 15px
+}
+
 .btn, a.btn{
   @include font(14, 14);
   display: inline-block;
   width: auto;
-  min-width: 60px;
+  min-width: 25px;
   height: 30px;
   line-height: 30px;
   text-align: center;
   padding: 0 15px 0;
   border-radius: 5px;
-  background-color: $blue;
   color: $white;
   flex-shrink: 0;
   vertical-align: middle;
-  &:not(.dis):hover{
-    opacity: 0.7;
-  }
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   // &:not(.dis)::hover,&:not(:disabled)::hover{
   //   opacity: 0.7;
   // }
-  &.gray{
-    background-color: #999;
+  &.btn_primary{
     color: $white;
+    background-color: #4e73df;
+    &:hover{
+      color: $white;
+      background-color: #2e59d9;
+      border-color: #2e59d9;
+    }
+    &:focus{
+      background-color: #2e59d9;
+      box-shadow: 0 0 0 .2rem rgba(105,136,228,.5)
+    }
   }
-  &.l_blue{
-    background-color: $white;
-    border: 1px solid $blue;
-    color: $blue;
+  &.btn_secondary{
+    color: $white;
+    background-color: #36b9cc;
+    &:hover{
+      color: $white;
+      background-color: #2c9faf;
+      border-color: #2a96a5;
+    }
+    &:focus{
+      background-color: #2c9faf;
+      box-shadow: 0 0 0 .2rem rgba(84,196,212,.5);
+    }
   }
-  &.l_gray{
-    background-color: $white;
-    border: 1px solid #999;
-    color: #666;
+  &.btn_success{
+    color: $white;
+    background-color: #1cc88a;
+    &:hover{
+      color: $white;
+      background-color: #17a673;
+      border-color: #169b6b
+    }
+    &:focus{
+      background-color: #17a673;
+      box-shadow: 0 0 0 .2rem rgba(62,208,156,.5);
+    }
+  }
+  &.btn_danger{
+    color: $white;
+    background-color: #e74a3b;
+    &:hover{
+      color: $white;
+      background-color: #e02d1b;
+      border-color: #d52a1a;
+    }
+    &:focus{
+      background-color: #e02d1b;
+      box-shadow: 0 0 0 .2rem rgba(235,101,88,.5);
+    }
+  }
+  &.btn_warning{
+    color: $white;
+    background-color: #f6c23e;
+    &:hover{
+      color: $white;
+      background-color: #f4b619;
+      border-color: #f4b30d;
+    }
+    &:focus{
+      background-color: #f4b619;
+      box-shadow: 0 0 0 .2rem rgba(247,203,91,.5);
+    }
+  }
+  &.btn_light{
+    color: $black;
+    background-color: #f2f6fc;
+    &:hover{
+      color: $black;
+      background-color: #e3e7ee;
+      border-color: #e3e7ee;
+    }
+    &:focus{
+      background-color: #e3e7ee;
+      box-shadow: 0 0 0 .2rem #e3e4e6;
+    }
+  }
+  &.btn_dark{
+    color: $white;
+    background-color: #212832;
+    &:hover{
+    color: $white;
+    background-color: #1c222b;
+    border-color: #1a2028;
+    }
+    &:focus{
+      background-color: #1c222b;
+      box-shadow: 0 0 0 .2rem #949595;
+    }
+  }
+  &.l_primary{
+    color: #4e73df;
+    border: 1px solid #4e73df;
+    &:hover{
+      color: $white;
+      background-color: #2e59d9;
+    }
+    &:focus{
+      color: $white;
+      background-color: #2e59d9;
+      box-shadow: 0 0 0 .2rem rgba(105,136,228,.5)
+    }
+  }
+  &.l_secondary{
+    color: #36b9cc;
+    border: 1px solid #36b9cc;
+    &:hover{
+      color: $white;
+      background-color: #2c9faf;
+    }
+    &:focus{
+      color: $white;
+      background-color: #2c9faf;
+      box-shadow: 0 0 0 .2rem rgba(84,196,212,.5);
+    }
+  }
+  &.l_success{
+    color: #1cc88a;
+    border: 1px solid #1cc88a;
+    &:hover{
+      color: $white;
+      background-color: #17a673;
+    }
+    &:focus{
+      color: $white;
+      background-color: #17a673;
+      box-shadow: 0 0 0 .2rem rgba(62,208,156,.5);
+    }
+  }
+  &.l_danger{
+    color: #e74a3b;
+    border: 1px solid #e74a3b;
+    &:hover{
+      color: $white;
+      background-color: #e02d1b;
+    }
+    &:focus{
+      color: $white;
+      background-color: #e02d1b;
+      box-shadow: 0 0 0 .2rem rgba(235,101,88,.5);
+    }
+  }
+  &.l_warning{
+    color: #f6c23e;
+    border: 1px solid #f6c23e;
+    &:hover{
+      color: $white;
+      background-color: #f4b619;
+    }
+    &:focus{
+      color: $white;
+      background-color: #f4b619;
+      box-shadow: 0 0 0 .2rem rgba(247,203,91,.5);
+    }
+  }
+  &.l_light{
+    color: #e3e6e9;
+    border: 1px solid #e3e6e9;
+    &:hover{
+      color: $black;
+      background-color: #e3e7ee;
+      border-color: #e3e7ee;
+    }
+    &:focus{
+      color: $black;
+      background-color: #f2f6fc;
+      box-shadow: 0 0 0 .2rem #e3e4e6;
+    }
+  }
+  &.l_dark{
+    color: #212832;
+    border: 1px solid #212832;
+    &:hover{
+    color: $white;
+    background-color: #1c222b;
+    border-color: #1a2028;
+    }
+    &:focus{
+      color: $white;
+      background-color: #1c222b;
+      box-shadow: 0 0 0 .2rem #949595;
+    }
   }
   &:disabled, &.dis{
     background-color: #f0f0f0;
@@ -145,60 +316,179 @@ h6{font-size: 12px;}
       opacity: 1;
     }
   }
-}
-
-.btn_sign{
-  @include blind;
-  @include setCont(25px, 25px, inline-block, relative);
-  border-radius: 3px;
-  flex-shrink: 0;
-  // &:not(.dis)::hover,&:not(:disabled)::hover{
-  &:hover{
-    opacity: 0.7;
+  &.btn-xs {
+    @include font(7, 7);
+    height: 20px;
+    line-height: 20px;
+    padding: 0 0.35rem;
   }
-  &:disabled,&.dis{
+  &.btn-sm {
+    @include font(11, 11);
+    height: 25px;
+    line-height: 25px;
+    padding: 0 0.5rem;
+  }
+  &.btn-lg {
+    @include font(18, 18);
+    height: 40px;
+    line-height: 40px;
+  }
+  &.btn-xl {
+    @include font(25, 25);
+    height: 50px;
+    line-height: 50px;
+  }
+}
+.btn_circle, a.btn_circle{
+  @include blind;
+  border-radius: 100%;
+  height: 2.3rem;
+  width: 2.3rem;
+  min-width: auto;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  &.btn-sm{
+    height: 1.8rem;
+    width: 1.8rem;
+    font-size: .75rem
+  }
+}
+.btn_ico{
+  @include blind;
+  @include setCont(null, null, inline-block, relative);
+  flex-shrink: 0;
+  &:disabled{
+    background-color: transparent;
     opacity: 0.4;
   }
-  &.c_white{
-    &:disabled,&.dis{
-      background-color: #999;
+  &.dis{
+    opacity: 0.4;
+    &.btn_primary{
+      background-color: #4e73df
     }
   }
 }
-.btn_reset{
-  @include bgSvg(icoReset("000"), no-repeat, 50% 50%, 14px auto);
+
+.btn_person{
+  @include bgSvg(icoPerson($s_blue), no-repeat, 50% 50%, 14px auto);
   &.c_white{
-    @include bgSvg(icoReset("fff"), no-repeat, 50% 50%, 14px auto, $blue);
+    @include bgSvg(icoPerson("fff"), no-repeat, 50% 50%, 14px auto, $blue);
+  }
+  &:hover{
+    @include bgSvg(icoPerson("fff"), no-repeat, 50% 50%, 14px auto, #2e59d9);
+  }
+  &:focus{
+    @include bgSvg(icoPerson("fff"), no-repeat, 50% 50%, 14px auto, #2e59d9);
+    box-shadow: 0 0 0 .2rem rgba(105,136,228,.5);
+  }
+}
+.btn_check{
+  @include bgSvg(icoCheck($s_secondary), no-repeat, 50% 50%, 14px auto);
+  &.c_white{
+    @include bgSvg(icoCheck("fff"), no-repeat, 50% 50%, 14px auto, $secondary);
+  }
+  &:hover{
+    @include bgSvg(icoCheck("fff"), no-repeat, 50% 50%, 14px auto, #2c9faf);
+  }
+  &:focus{
+    @include bgSvg(icoCheck("fff"), no-repeat, 50% 50%, 14px auto, #2c9faf);
+    box-shadow: 0 0 0 .2rem rgba(84,196,212,.5);
+  }
+}
+.btn_reset{
+  @include bgSvg(icoReset($s_success), no-repeat, 50% 50%, 14px auto);
+  &.c_white{
+    @include bgSvg(icoReset("fff"), no-repeat, 50% 50%, 14px auto, $success);
+  }
+  &:hover{
+    @include bgSvg(icoReset("fff"), no-repeat, 50% 50%, 14px auto, #17a673);
+  }
+  &:focus{
+    @include bgSvg(icoReset("fff"), no-repeat, 50% 50%, 14px auto, #17a673);
+    box-shadow: 0 0 0 .2rem rgba(62,208,156,.5);
+  }
+}
+.btn_help{
+  @include bgSvg(icoHelp($s_danger), no-repeat, 50% 50%, 14px auto);
+  &.c_white{
+    @include bgSvg(icoHelp("fff"), no-repeat, 50% 50%, 14px auto ,$danger);
+  }
+  &:hover{
+    @include bgSvg(icoHelp("fff"), no-repeat, 50% 50%, 14px auto, #e02d1b);
+  }
+  &:focus{
+    @include bgSvg(icoHelp("fff"), no-repeat, 50% 50%, 14px auto, #e02d1b);
+    box-shadow: 0 0 0 .2rem rgba(235,101,88,.5);
+  }
+}
+.btn_setting{
+  @include bgSvg(icoSetting($s_warning), no-repeat, 50% 50%, 14px auto);
+  &.c_white{
+    @include bgSvg(icoSetting("fff"), no-repeat, 50% 50%, 14px auto ,$warning);
+  }
+  &:hover{
+    @include bgSvg(icoSetting("fff"), no-repeat, 50% 50%, 14px auto, #f4b619);
+  }
+  &:focus{
+    @include bgSvg(icoSetting("fff"), no-repeat, 50% 50%, 14px auto, #f4b619);
+    box-shadow: 0 0 0 .2rem rgba(247,203,91,.5);
   }
 }
 .btn_search{
-  @include bgSvg(icoSearch("000"), no-repeat, 50% 50%, 14px auto);
+  @include bgSvg(icoSearch($s_blue), no-repeat, 50% 50%, 12px auto);
   &.c_white{
-    @include bgSvg(icoSearch("fff"), no-repeat, 50% 40%, 14px auto, $blue);
+    @include bgSvg(icoSearch("fff"), no-repeat, 50% 50%, 12px auto, $blue);
   }
 }
 .btn_close{
-  @include bgSvg(icoClose("000"), no-repeat, 50% 50%, 12px auto);
+  @include bgSvg(icoClose($s_blue), no-repeat, 50% 50%, 12px auto);
   &.c_white{
     @include bgSvg(icoClose("fff"), no-repeat, 50% 50%, 12px auto, $blue);
   }
 }
 .btn_add{
-  @include bgSvg(icoAdd("000"), no-repeat, 50% 50%, 12px auto);
+  @include bgSvg(icoAdd($s_blue), no-repeat, 50% 50%, 12px auto);
   &.c_white{
     @include bgSvg(icoAdd("fff"), no-repeat, 50% 50%, 12px auto, $blue);
   }
 }
 .btn_subt{
-  @include bgSvg(icoSubt("000"), no-repeat, 50% 50%, 12px auto);
+  @include bgSvg(icoSubt($s_blue), no-repeat, 50% 50%, 12px auto);
   &.c_white{
     @include bgSvg(icoSubt("fff"), no-repeat, 50% 50%, 12px auto, $blue);
+  }
+}
+.btn_calendar{
+  @include bgSvg(icoCalendar($s_blue), no-repeat, 50% 50%, 12px auto);
+  &.c_white{
+    @include bgSvg(icoCalendar("fff"), no-repeat, 50% 50%, 12px auto, $blue);
+  }
+}
+.btn_download{
+  @include bgSvg(icoDownload($s_blue), no-repeat, 50% 50%, 15px auto);
+  &.c_white{
+    @include bgSvg(icoDownload("fff"), no-repeat, 50% 50%, 15px auto, $blue);
+  }
+}
+.btn_filter{
+  @include bgSvg(icoFilter($s_blue), no-repeat, 50% 50%, 12px auto);
+  &.c_white{
+    @include bgSvg(icoFilter("fff"), no-repeat, 50% 50%, 12px auto, $blue);
+  }
+}
+.btn_inputarrow{
+  @include bgSvg(icoInputarrow($s_blue), no-repeat, 50% 50%, 12px auto);
+  &.c_white{
+    @include bgSvg(icoInputarrow("fff"), no-repeat, 50% 50%, 12px auto, $blue);
   }
 }
 .btn_up, .btn_down, .btn_prev, .btn_next{
   &::before{
     @include setCont(20px, 20px, inline-block, absolute);
-    @include bgSvg(arrDown("000"), no-repeat, 50% 50%, 12px auto);
+    @include bgSvg(arrDown($s_blue), no-repeat, 50% 50%, 12px auto);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -235,7 +525,6 @@ input.ipt{
     color: #666;
   }
 }
-
 .bx_search{
   @include setCont(100%, 100%, flex, relative);
   align-items: center;
@@ -251,8 +540,6 @@ input.ipt{
     border-left: 1px solid #aaa;
   }
 }
-
-
 
 .slct{
   display: block;
