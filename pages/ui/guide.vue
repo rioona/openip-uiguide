@@ -66,9 +66,9 @@
               <span class="bg_black txt_white">.bg_black : 배경 (검정)</span><br/>
               <span class="bg_gray txt_white">.bg_gray : 배경 (회색)</span><br/>
               <span class="bg_point txt_white">.bg_point : 배경 (포인트)</span><br/>
-              <span class="bg_red">.bg_red : 배경 (빨강)</span><br/>
-              <span class="bg_blue">.bg_blue : 배경 (파랑)</span><br/>
-              <span class="bg_sky">.bg_sky : 배경 (하늘)</span><br/>
+              <span class="bg_red txt_white">.bg_red : 배경 (빨강)</span><br/>
+              <span class="bg_blue txt_white">.bg_blue : 배경 (파랑)</span><br/>
+              <span class="bg_green txt_white">.bg_sky : 배경 (그린)</span><br/>
             </div>
             <h3 class="ui_h3">텍스트 줄임(한줄)</h3>
             <div class="g_cont">
@@ -169,8 +169,8 @@
                 .col2 : div2개 가로값 50% 일렬로 정렬 (하위요소는 col)
               </h5>
               <div class="col2 mb10">
-                <div class="col bg_red">div1</div>
-                <div class="col bg_blue">div2</div>
+                <div class="col">div1</div>
+                <div class="col">div2</div>
               </div>
               <h5>
                 .col3 : div3개 가로값 33.3% 일렬로 정렬 (하위요소는 col)
