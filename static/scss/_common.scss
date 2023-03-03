@@ -144,7 +144,7 @@ p.ui_point{
   // &:not(.dis)::hover,&:not(:disabled)::hover{
   //   opacity: 0.7;
   // }
-  &.btn_primary{
+  &.btn_point{
     color: $white;
     background-color: #4e73df;
     &:hover{
@@ -157,7 +157,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem rgba(105,136,228,.5)
     }
   }
-  &.btn_secondary{
+  &.btn_sky{
     color: $white;
     background-color: #36b9cc;
     &:hover{
@@ -170,7 +170,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem rgba(84,196,212,.5);
     }
   }
-  &.btn_success{
+  &.btn_green{
     color: $white;
     background-color: #1cc88a;
     &:hover{
@@ -183,7 +183,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem rgba(62,208,156,.5);
     }
   }
-  &.btn_danger{
+  &.btn_red{
     color: $white;
     background-color: #e74a3b;
     &:hover{
@@ -196,7 +196,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem rgba(235,101,88,.5);
     }
   }
-  &.btn_warning{
+  &.btn_org{
     color: $white;
     background-color: #f6c23e;
     &:hover{
@@ -235,7 +235,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem #949595;
     }
   }
-  &.l_primary{
+  &.l_point{
     color: #4e73df;
     border: 1px solid #4e73df;
     &:hover{
@@ -248,7 +248,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem rgba(105,136,228,.5)
     }
   }
-  &.l_secondary{
+  &.l_sky{
     color: #36b9cc;
     border: 1px solid #36b9cc;
     &:hover{
@@ -261,7 +261,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem rgba(84,196,212,.5);
     }
   }
-  &.l_success{
+  &.l_green{
     color: #1cc88a;
     border: 1px solid #1cc88a;
     &:hover{
@@ -274,7 +274,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem rgba(62,208,156,.5);
     }
   }
-  &.l_danger{
+  &.l_red{
     color: #e74a3b;
     border: 1px solid #e74a3b;
     &:hover{
@@ -287,7 +287,7 @@ p.ui_point{
       box-shadow: 0 0 0 .2rem rgba(235,101,88,.5);
     }
   }
-  &.l_warning{
+  &.l_org{
     color: #f6c23e;
     border: 1px solid #f6c23e;
     &:hover{
@@ -385,7 +385,7 @@ p.ui_point{
   }
   &.dis{
     opacity: 0.4;
-    &.btn_primary{
+    &.btn_point{
       background-color: #4e73df
     }
   }
@@ -405,9 +405,9 @@ p.ui_point{
   }
 }
 .btn_check{
-  @include bgSvg(icoCheck($s_secondary), no-repeat, 50% 50%, 14px auto);
+  @include bgSvg(icoCheck($s_sky), no-repeat, 50% 50%, 14px auto);
   &.c_white{
-    @include bgSvg(icoCheck("fff"), no-repeat, 50% 50%, 14px auto, $secondary);
+    @include bgSvg(icoCheck("fff"), no-repeat, 50% 50%, 14px auto, $sky);
   }
   &:hover{
     @include bgSvg(icoCheck("fff"), no-repeat, 50% 50%, 14px auto, #2c9faf);
@@ -418,9 +418,9 @@ p.ui_point{
   }
 }
 .btn_reset{
-  @include bgSvg(icoReset($s_success), no-repeat, 50% 50%, 14px auto);
+  @include bgSvg(icoReset($s_green), no-repeat, 50% 50%, 14px auto);
   &.c_white{
-    @include bgSvg(icoReset("fff"), no-repeat, 50% 50%, 14px auto, $success);
+    @include bgSvg(icoReset("fff"), no-repeat, 50% 50%, 14px auto, $green);
   }
   &:hover{
     @include bgSvg(icoReset("fff"), no-repeat, 50% 50%, 14px auto, #17a673);
@@ -431,9 +431,9 @@ p.ui_point{
   }
 }
 .btn_help{
-  @include bgSvg(icoHelp($s_danger), no-repeat, 50% 50%, 14px auto);
+  @include bgSvg(icoHelp($s_red), no-repeat, 50% 50%, 14px auto);
   &.c_white{
-    @include bgSvg(icoHelp("fff"), no-repeat, 50% 50%, 14px auto ,$danger);
+    @include bgSvg(icoHelp("fff"), no-repeat, 50% 50%, 14px auto ,$red);
   }
   &:hover{
     @include bgSvg(icoHelp("fff"), no-repeat, 50% 50%, 14px auto, #e02d1b);
@@ -444,9 +444,9 @@ p.ui_point{
   }
 }
 .btn_setting{
-  @include bgSvg(icoSetting($s_warning), no-repeat, 50% 50%, 14px auto);
+  @include bgSvg(icoSetting($s_org), no-repeat, 50% 50%, 14px auto);
   &.c_white{
-    @include bgSvg(icoSetting("fff"), no-repeat, 50% 50%, 14px auto ,$warning);
+    @include bgSvg(icoSetting("fff"), no-repeat, 50% 50%, 14px auto ,$org);
   }
   &:hover{
     @include bgSvg(icoSetting("fff"), no-repeat, 50% 50%, 14px auto, #f4b619);

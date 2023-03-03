@@ -66,9 +66,10 @@
               <span class="bg_black txt_white">.bg_black : 배경 (검정)</span><br/>
               <span class="bg_gray txt_white">.bg_gray : 배경 (회색)</span><br/>
               <span class="bg_point txt_white">.bg_point : 배경 (포인트)</span><br/>
-              <span class="bg_red txt_white">.bg_red : 배경 (빨강)</span><br/>
               <span class="bg_blue txt_white">.bg_blue : 배경 (파랑)</span><br/>
-              <span class="bg_green txt_white">.bg_sky : 배경 (그린)</span><br/>
+              <span class="bg_green txt_white">.bg_green : 배경 (그린)</span><br/>
+              <span class="bg_red txt_white">.bg_red : 배경 (빨강)</span><br/>
+              <span class="bg_org txt_white">.bg_org : 배경 (노랑)</span><br/>
             </div>
             <h3 class="ui_h3">텍스트 줄임(한줄)</h3>
             <div class="g_cont">
@@ -220,63 +221,63 @@
             <h3 class="ui_h3">버튼 : .btn - button, a태크에 사용</h3>
             <div class="g_cont">
               <p class="mb10 ui_point">📌 Colors</p>
-              <button type="button" class="btn btn_primary">primary</button>
-              <button type="button" class="btn btn_secondary">secondary</button>
-              <button type="button" class="btn btn_success">success</button>
-              <button type="button" class="btn btn_danger">danger</button>
-              <button type="button" class="btn btn_warning">warning</button>
+              <button type="button" class="btn btn_point">point</button>
+              <button type="button" class="btn btn_sky">sky</button>
+              <button type="button" class="btn btn_green">green</button>
+              <button type="button" class="btn btn_red">red</button>
+              <button type="button" class="btn btn_org">org</button>
               <button type="button" class="btn btn_light">light</button>
               <button type="button" class="btn btn_dark">dark</button>
               <div class="mt10">
-                <nuxt-link to="" class="btn btn_primary">a.primary</nuxt-link>
-                <nuxt-link to="" class="btn btn_secondary">a.secondary</nuxt-link>
-                <nuxt-link to="" class="btn btn_success">a.success</nuxt-link>
-                <nuxt-link to="" class="btn btn_danger">a.danger</nuxt-link>
-                <nuxt-link to="" class="btn btn_warning">a.warning</nuxt-link>
+                <nuxt-link to="" class="btn btn_point">a.point</nuxt-link>
+                <nuxt-link to="" class="btn btn_sky">a.sky</nuxt-link>
+                <nuxt-link to="" class="btn btn_green">a.green</nuxt-link>
+                <nuxt-link to="" class="btn btn_red">a.red</nuxt-link>
+                <nuxt-link to="" class="btn btn_org">a.org</nuxt-link>
                 <nuxt-link to="" class="btn btn_light">a.light</nuxt-link>
                 <nuxt-link to="" class="btn btn_dark">a.dark</nuxt-link>
               </div>
               <p class="mt10 mb10 ui_point">📌 Outline Buttons</p>
-              <button type="button" class="btn l_primary">primary</button>
-              <button type="button" class="btn l_secondary">secondary</button>
-              <button type="button" class="btn l_success">success</button>
-              <button type="button" class="btn l_danger">danger</button>
-              <button type="button" class="btn l_warning">warning</button>
+              <button type="button" class="btn l_point">point</button>
+              <button type="button" class="btn l_sky">sky</button>
+              <button type="button" class="btn l_green">green</button>
+              <button type="button" class="btn l_red">red</button>
+              <button type="button" class="btn l_org">org</button>
               <button type="button" class="btn l_light">light</button>
               <button type="button" class="btn l_dark">dark</button>
               <div class="mt10">
-                <nuxt-link to="" class="btn l_primary">a.primary</nuxt-link>
-                <nuxt-link to="" class="btn l_secondary">a.secondary</nuxt-link>
-                <nuxt-link to="" class="btn l_success">a.success</nuxt-link>
-                <nuxt-link to="" class="btn l_danger">a.danger</nuxt-link>
-                <nuxt-link to="" class="btn l_warning">a.warning</nuxt-link>
+                <nuxt-link to="" class="btn l_point">a.point</nuxt-link>
+                <nuxt-link to="" class="btn l_sky">a.sky</nuxt-link>
+                <nuxt-link to="" class="btn l_green">a.green</nuxt-link>
+                <nuxt-link to="" class="btn l_red">a.red</nuxt-link>
+                <nuxt-link to="" class="btn l_org">a.org</nuxt-link>
                 <nuxt-link to="" class="btn l_light">a.light</nuxt-link>
                 <nuxt-link to="" class="btn l_dark">a.dark</nuxt-link>
               </div>
               <p class="mt10 ui_point">📌 Sizing</p>
               <p class="mb10">최소 가로값 : 25px, 세로 : 20px (line-height 20px), font : 7px</p>
-              <button type="button" class="btn btn_primary btn-xs">EXTRA SMALL</button>
-              <button type="button" class="btn btn_primary btn-sm">SMALL</button>
-              <button type="button" class="btn btn_primary">기본</button>
-              <button type="button" class="btn btn_primary btn-lg">LARGE</button>
-              <button type="button" class="btn btn_primary btn-xl">EXTRA LARGE</button>
+              <button type="button" class="btn btn_point btn-xs">EXTRA SMALL</button>
+              <button type="button" class="btn btn_point btn-sm">SMALL</button>
+              <button type="button" class="btn btn_point">기본</button>
+              <button type="button" class="btn btn_point btn-lg">LARGE</button>
+              <button type="button" class="btn btn_point btn-xl">EXTRA LARGE</button>
               <div class="mt10">
-                <nuxt-link to="" class="btn l_primary btn-xs">a.EXTRA SMALL</nuxt-link>
-                <nuxt-link to="" class="btn l_secondary btn-sm">a.SMALL</nuxt-link>
-                <nuxt-link to="" class="btn l_success">a.기본</nuxt-link>
-                <nuxt-link to="" class="btn l_danger btn-lg">a.LARGE</nuxt-link>
-                <nuxt-link to="" class="btn l_warning btn-xl">a.EXTRA LARGE</nuxt-link>
+                <nuxt-link to="" class="btn l_point btn-xs">a.EXTRA SMALL</nuxt-link>
+                <nuxt-link to="" class="btn l_sky btn-sm">a.SMALL</nuxt-link>
+                <nuxt-link to="" class="btn l_green">a.기본</nuxt-link>
+                <nuxt-link to="" class="btn l_red btn-lg">a.LARGE</nuxt-link>
+                <nuxt-link to="" class="btn l_org btn-xl">a.EXTRA LARGE</nuxt-link>
               </div>
               <p class="mb10 ui_point">📌 Disabled</p>
               <nuxt-link to="" class="btn dis">a.btn.dis</nuxt-link>
               <button type="button" class="btn" disabled="disabled">button disabled 속성</button>
               <p class="mt10 mb10 ui_point">📌 Half</p>
               <div class="mt5 mb5 flex_bw">
-                <button type="button" class="btn btn_primary half">.btn.half</button>
-                <nuxt-link to="" class="btn btn_primary half">.a.half</nuxt-link>
+                <button type="button" class="btn btn_point half">.btn.half</button>
+                <nuxt-link to="" class="btn btn_point half">.a.half</nuxt-link>
               </div>
               <div class="mb5">
-                <button type="button" class="btn l_primary full">.btn.full</button>
+                <button type="button" class="btn l_point full">.btn.full</button>
               </div>
             </div>
             <h3 class="ui_h3">아이콘 버튼 : .btn_sign + 해당 버튼 클래스 - button, a태크에 사용</h3>
@@ -295,131 +296,131 @@
                 <button type="button" class="btn btn_circle c_white btn_reset"></button>
                 <button type="button" class="btn btn_circle c_white btn_help"></button>
                 <button type="button" class="btn btn_circle c_white btn_setting"></button>
-                <button type="button" class="btn l_primary btn_circle btn_person"></button>
-                <button type="button" class="btn l_secondary btn_circle btn_check"></button>
-                <button type="button" class="btn l_success btn_circle btn_reset"></button>
-                <button type="button" class="btn l_danger btn_circle btn_help"></button>
-                <button type="button" class="btn l_warning btn_circle btn_setting"></button>
+                <button type="button" class="btn l_point btn_circle btn_person"></button>
+                <button type="button" class="btn l_sky btn_circle btn_check"></button>
+                <button type="button" class="btn l_green btn_circle btn_reset"></button>
+                <button type="button" class="btn l_red btn_circle btn_help"></button>
+                <button type="button" class="btn l_org btn_circle btn_setting"></button>
                 <div class="mt10">
                   <nuxt-link to="" class="btn btn_circle c_white btn_person"></nuxt-link>
                   <nuxt-link to="" class="btn btn_circle c_white btn_check"></nuxt-link>
                   <nuxt-link to="" class="btn btn_circle c_white btn_reset"></nuxt-link>
                   <nuxt-link to="" class="btn btn_circle c_white btn_help"></nuxt-link>
                   <nuxt-link to="" class="btn btn_circle c_white btn_setting"></nuxt-link>
-                  <nuxt-link to="" class="btn l_primary btn_circle btn_person"></nuxt-link>
-                  <nuxt-link to="" class="btn l_secondary btn_circle btn_check"></nuxt-link>
-                  <nuxt-link to="" class="btn l_success btn_circle btn_reset"></nuxt-link>
-                  <nuxt-link to="" class="btn l_danger btn_circle btn_help"></nuxt-link>
-                  <nuxt-link to="" class="btn l_warning btn_circle btn_setting"></nuxt-link>
+                  <nuxt-link to="" class="btn l_point btn_circle btn_person"></nuxt-link>
+                  <nuxt-link to="" class="btn l_sky btn_circle btn_check"></nuxt-link>
+                  <nuxt-link to="" class="btn l_green btn_circle btn_reset"></nuxt-link>
+                  <nuxt-link to="" class="btn l_red btn_circle btn_help"></nuxt-link>
+                  <nuxt-link to="" class="btn l_org btn_circle btn_setting"></nuxt-link>
                 </div>
                 <p class="mt10">Small</p>
-                <button type="button" class="btn btn_primary btn_circle btn-sm c_white btn_person"></button>
-                <button type="button" class="btn btn_secondary btn_circle btn-sm c_white btn_check"></button>
-                <button type="button" class="btn btn_success btn_circle btn-sm c_white btn_reset"></button>
-                <button type="button" class="btn btn_danger btn_circle btn-sm c_white btn_help"></button>
-                <button type="button" class="btn btn_warning btn_circle btn-sm c_white btn_setting"></button>
+                <button type="button" class="btn btn_point btn_circle btn-sm c_white btn_person"></button>
+                <button type="button" class="btn btn_sky btn_circle btn-sm c_white btn_check"></button>
+                <button type="button" class="btn btn_green btn_circle btn-sm c_white btn_reset"></button>
+                <button type="button" class="btn btn_red btn_circle btn-sm c_white btn_help"></button>
+                <button type="button" class="btn btn_org btn_circle btn-sm c_white btn_setting"></button>
                 <div class="mt10">
-                  <nuxt-link to="" class="btn btn_primary btn_circle btn-sm c_white btn_person"></nuxt-link>
-                  <nuxt-link to="" class="btn btn_secondary btn_circle btn-sm c_white btn_check"></nuxt-link>
-                  <nuxt-link to="" class="btn btn_success btn_circle btn-sm c_white btn_reset"></nuxt-link>
-                  <nuxt-link to="" class="btn btn_danger btn_circle btn-sm c_white btn_help"></nuxt-link>
-                  <nuxt-link to="" class="btn btn_warning btn_circle btn-sm c_white btn_setting"></nuxt-link>
+                  <nuxt-link to="" class="btn btn_point btn_circle btn-sm c_white btn_person"></nuxt-link>
+                  <nuxt-link to="" class="btn btn_sky btn_circle btn-sm c_white btn_check"></nuxt-link>
+                  <nuxt-link to="" class="btn btn_green btn_circle btn-sm c_white btn_reset"></nuxt-link>
+                  <nuxt-link to="" class="btn btn_red btn_circle btn-sm c_white btn_help"></nuxt-link>
+                  <nuxt-link to="" class="btn btn_org btn_circle btn-sm c_white btn_setting"></nuxt-link>
                 </div>
                 <p class="mt10 mb10 ui_point">📌 Square Icon Buttons</p>
                 <div class="flex_a_center mb5">
                   .btn_search.btn_sign :
                   <button type="button" class="btn btn_ico btn_search">검색 버튼</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_search">검색 버튼</button> 
+                  <button type="button" class="btn btn_ico btn_point c_white btn_search">검색 버튼</button> 
                   <span class="ml10"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_search" disabled="disabled">검색 버튼</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_search">검색 버튼</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_search">검색 버튼</nuxt-link>
                 </div>
                 <div class="flex_a_center mb5">
                   .btn_close.btn_sign :
                   <button type="button" class="btn btn_ico btn_close">검색 버튼</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_close">검색 버튼</button> 
+                  <button type="button" class="btn btn_ico btn_point c_white btn_close">검색 버튼</button> 
                   <span class="ml10"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_close" disabled="disabled">검색 버튼</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_close">검색 버튼</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_close">검색 버튼</nuxt-link>
                 </div>
                 <div class="flex_a_center mb5">
                   .btn_calendar.btn_sign :
                   <button type="button" class="btn btn_ico btn_calendar">달력</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_calendar">달력</button> 
+                  <button type="button" class="btn btn_ico btn_point c_white btn_calendar">달력</button> 
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_calendar" disabled="disabled">달력</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_calendar">달력</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_calendar">달력</nuxt-link>
                 </div>
                 <div class="flex_a_center mb5">
                   .btn_download.btn_sign :
                   <button type="button" class="btn btn_ico btn_download">다운로드</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_download">다운로드</button> 
+                  <button type="button" class="btn btn_ico btn_point c_white btn_download">다운로드</button> 
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_download" disabled="disabled">다운로드</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_download">다운로드</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_download">다운로드</nuxt-link>
                 </div>
                 <div class="flex_a_center mb5">
                   .btn_filter.btn_sign :
                   <button type="button" class="btn btn_ico btn_filter">필터</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_filter">필터</button> 
+                  <button type="button" class="btn btn_ico btn_point c_white btn_filter">필터</button> 
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_filter" disabled="disabled">필터</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_filter">필터</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_filter">필터</nuxt-link>
                 </div>
                 <div class="flex_a_center mb5">
                   .btn_inputarrow.btn_sign :
                   <button type="button" class="btn btn_ico btn_inputarrow">증가감소</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_inputarrow">증가감소</button> 
+                  <button type="button" class="btn btn_ico btn_point c_white btn_inputarrow">증가감소</button> 
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_inputarrow" disabled="disabled">증가감소</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_inputarrow">증가감소</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_inputarrow">증가감소</nuxt-link>
                 </div>
                 <div class="flex_a_center mt5">
                   .btn_add.btn_sign : 
                   <button type="button" class="btn btn_ico btn_add">더하기 버튼</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_add">더하기 버튼</button>
+                  <button type="button" class="btn btn_ico btn_point c_white btn_add">더하기 버튼</button>
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_add" disabled="disabled">더하기 버튼</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_add">더하기 버튼</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_add">더하기 버튼</nuxt-link>
                 </div>
                 <div class="flex_a_center mt5">
                   .btn_subt.btn_sign : 
                   <button type="button" class="btn btn_ico btn_subt">빼기 버튼</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_subt">빼기 버튼</button>
+                  <button type="button" class="btn btn_ico btn_point c_white btn_subt">빼기 버튼</button>
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_subt" disabled="disabled">빼기 버튼</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_subt">빼기 버튼</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_subt">빼기 버튼</nuxt-link>
                 </div>
                 <div class="flex_a_center mt5">
                   .btn_down.btn_sign : 
                   <button type="button" class="btn btn_ico btn_down">아래 버튼</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_down">아래 버튼</button>
+                  <button type="button" class="btn btn_ico btn_point c_white btn_down">아래 버튼</button>
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_down" disabled="disabled">아래 버튼</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_down">아래 버튼</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_down">아래 버튼</nuxt-link>
                 </div>   
                 <div class="flex_a_center mt5">
                   .btn_prev.btn_sign : 
                   <button type="button" class="btn btn_ico btn_prev">이전 버튼</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_prev">이전 버튼</button>
+                  <button type="button" class="btn btn_ico btn_point c_white btn_prev">이전 버튼</button>
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_prev" disabled="disabled">이전 버튼</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_prev">이전 버튼</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_prev">이전 버튼</nuxt-link>
                 </div>
                 <div class="flex_a_center mt5">
                   .btn_next.btn_sign : 
                   <button type="button" class="btn btn_ico btn_next">다음 버튼</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_next">다음 버튼</button>
+                  <button type="button" class="btn btn_ico btn_point c_white btn_next">다음 버튼</button>
                   <span class="ml5"> 비활성화 :</span> 
                   <button type="button" class="btn btn_ico btn_next" disabled="disabled">다음 버튼</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_next">다음 버튼</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_next">다음 버튼</nuxt-link>
                 </div>
                 <div class="flex_a_center mt5">
                   .btn_down.btn_sign : <button type="button" class="btn btn_ico btn_down">아래 버튼</button>
-                  <button type="button" class="btn btn_ico btn_primary c_white btn_down">아래 버튼</button>
+                  <button type="button" class="btn btn_ico btn_point c_white btn_down">아래 버튼</button>
                   <span class="ml5"> 비활성화</span> 
                   <button type="button" class="btn btn_ico btn_down" disabled="disabled">아래 버튼</button>
-                  <nuxt-link to="" class="btn btn_ico btn_primary c_white dis btn_down">아래 버튼</nuxt-link>
+                  <nuxt-link to="" class="btn btn_ico btn_point c_white dis btn_down">아래 버튼</nuxt-link>
                 </div>
               </div>
             </div>
