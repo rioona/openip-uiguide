@@ -512,6 +512,11 @@
               <Tooltip type="?" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
               <Tooltip type="!" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
             </div>
+            <h3 class="ui_h3">팝업</h3>
+            <div class="g_cont">
+              <span @click="fnShowPopup()">팝업창입니다.</span>
+              <Popup v-if="$store.state.ui.popupData.state === true"/>
+            </div>
           </div>
           <div class="col">
 
@@ -757,6 +762,7 @@ import Select from "~/components/form/Select";
 import CheckBox from "~/components/form/CheckBox";
 import RadioBox from "~/components/form/RadioBox";
 import Tooltip from "~/components/common/Tooltip";
+import Popup from "~/components/common/Popup.vue";
 // import SelectSearch from "~/components/common/SelectSearch";
 // import CreatePop from "~/components/popup/Create";
 // import CsPop from "~/components/popup/Cs";
@@ -774,7 +780,8 @@ export default {
     Select,
     CheckBox,
     RadioBox,
-    Tooltip
+    Tooltip,
+    Popup,
     // InputBox,
     // SelectSearch,
     // CreatePop,
@@ -820,6 +827,15 @@ export default {
     //     this.$store.dispatch('ui/setPopCs3State', true); 
     //   }
     // },
+    fnShowPopup() {
+      let data = {
+        state: true,
+        type: 'popup',
+        title: '<h3>제목</h3>',
+        cont: `<p>팝업창입니다.</p>`,
+      };
+      this.$store.dispatch('ui/setPopupData', data);
+    },
   },
 };
 </script>
