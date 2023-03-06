@@ -500,6 +500,29 @@
               <RadioBox label="라디오박스3" id="1" group="radi2" :disabled="true"/>
               <RadioBox label="라디오박스4" id="2"  group="radi2" :value="true" :disabled="true"/>
             </div>
+            <h3 class="ui_h3">Scroll style</h3>
+            <div class="flex_bw ui_scroll">
+                <div class="half scroll1">
+                  <strong>.scroll1</strong><br/>
+                  This is the true joy in life, the being used 
+                  for a purpose recognized by yourself as a mighty
+                  ne instead of a feverish selfish little clod of
+                  ailments and grievances complaining that the world
+                  will not devote itself to making you happyby 
+                  yourself as a mighty ne instead of a feverish selfish
+                  little clod of ailments.
+                </div>
+                <div class="half scroll2">
+                  <strong>.scroll2</strong><br/>
+                  This is the true joy in life, the being used 
+                  for a purpose recognized by yourself as a mighty
+                  ne instead of a feverish selfish little clod of
+                  ailments and grievances complaining that the world
+                  will not devote itself to making you happyby 
+                  yourself as a mighty ne instead of a feverish selfish
+                  little clod of ailments.
+                </div>
+              </div>
           </div>
         </div>
       </article>
