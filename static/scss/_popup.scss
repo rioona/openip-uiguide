@@ -151,9 +151,12 @@
     //     }
     //   }
     // }
-    .col {
-      display: flex;
+    &.col2 {
       justify-content: center;
+      .col {
+        display: flex;
+        justify-content: center;
+      }
     }
     .btn{
       // @include setCont(100%, 100%, flex);

@@ -545,8 +545,9 @@
           <div class="col full">
             <h3 class="ui_h3">팝업</h3>
             <div class="g_cont">
-              <button @click="fnShowPopup()">팝업창입니다.</button>
-              <button @click="fnShowAlert()">알림창입니다.</button>   
+              <button @click="fnShowPopup()">팝업창</button>
+              <button @click="fnShowAlert1()">알림창1</button>
+              <button @click="fnShowAlert2()">알림창2</button> 
             </div>
           </div>
         </div>
@@ -946,7 +947,7 @@ export default {
       };
       this.$store.dispatch('ui/setPopupData', data);
     },
-    fnShowAlert() {
+    fnShowAlert1() {
       let data = {
         state: true,
         type: 'confirm',
@@ -958,9 +959,24 @@ export default {
             link: "cancel",
           },
           {
-            name: "확인",
+            name: "이동",
             link: "/",
           },
+        ]
+      };
+      this.$store.dispatch('ui/setAlertData', data);
+    },
+    fnShowAlert2() {
+      let data = {
+        state: true,
+        type: 'confirm',
+        title: '',
+        msg: `<p>알림창입니다.</p>`,
+        btns: [
+          {
+            name: "확인",
+            link: "cancel",
+          }
         ]
       };
       this.$store.dispatch('ui/setAlertData', data);
