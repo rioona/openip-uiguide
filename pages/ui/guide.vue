@@ -2,13 +2,12 @@
   <div class="ui_wrap ui_guide">
     <div class="ui_header">
       <h1 class="ui_h1"><strong>공통</strong> Guide Page</h1>
-      <p class="f14">해당가이드에 있는 내용은 아래 css를 넣어주시면 사용가능합니다.</p>
       <!-- <p class="f14">해당가이드에 있는 클래스들은 2023년 01월 이후로 만들어진 모든 프로젝트에서 사용 가능합니다.</p> -->
     </div>
     <section class="ui_container">
       <div class="ui_area_notice">
-        <p><strong>적용 프로젝트 </strong> - 없음</p>
-        <p>해등 스타일은 기본이니 각 프로젝트에 맞춰 덮어서 사용 부탁드립니다.</p>
+        <p class="f14">해당가이드에 있는 내용은 아래 css를 넣어주시면 사용가능합니다.</p>
+        <p class="f14">해등 스타일은 기본이니 각 프로젝트에 맞춰 덮어서 사용 부탁드립니다.</p>
       </div>
       <section class="ui_area" id="ui_area1">
         <h2 class="ui_h2 mb5">🎯 스타일 가이드</h2>
@@ -628,240 +627,17 @@
               <button type="button" class="tap">탭3</button>
               <button type="button" class="tap">탭4</button>
             </div>
+            <h3 class="ui_h3 mt20">탭 .taps</h3>
+            <div class="taps">
+              <button type="button" class="tap">탭1</button>
+              <button type="button" class="tap on">탭2</button>
+              <button type="button" class="tap">탭3</button>
+              <button type="button" class="tap">탭4</button>
+            </div>
           </article>
         </div>
       </section>
     </section>
-
-    <!-- 
-    <article class="g_bx" id="g_bx1">
-       <h3 class="ui_h2">🎯 button & tab 가이드</h2>
-      <div class="col2">
-        <div class="g_left">
-          <p class="mb40">.btn : 기본 색상 파랑색, .full 클래스를 추가하면 가로사이즈 100% 적용</p>
-          <div class="g_cont">
-             <h3 class="ui_h3">DEFAULT BUTTONS</h3>
-            <p></p>
-            <button type="button" class="btn full">.btn.full</button><br>
-            <button type="button" class="btn">.btn</button>
-            <button type="button" class="btn sky">.btn.sky</button>
-            <button type="button" class="btn red">.btn.red</button>
-            <button type="button" class="btn dark">.btn.dark</button>
-            <button type="button" class="btn dis">.btn.dis</button>
-            <button type="button" class="btn sm">.btn.sm</button>
-          </div>
-          <div class="g_cont">
-             <h3 class="ui_h3">OUTLINE BUTTONS</h3>
-            <button type="button" class="btn l_blue">.btn.l_blue</button>
-            <button type="button" class="btn l_sky">.btn.l_sky</button>
-            <button type="button" class="btn l_red">.btn.l_red</button>
-            <button type="button" class="btn l_dark">.btn.l_dark</button>
-            <button type="button" class="btn l_dis">.btn.l_dis</button>
-          </div>
-          <div class="g_cont">
-             <h3 class="ui_h3">ICON+BUTTONS</h3>
-            <button type="button" class="btn b_refresh"><b>.btn.b_refresh</b></button>
-            <button type="button" class="btn b_setting"><b>btn.b_setting</b></button>
-            <button type="button" class="btn b_cancel"><b>btn.b_cancel</b></button>
-            <button type="button" class="btn b_checked"><b>.btn.b_checked</b></button>
-            <button type="button" class="btn b_add"><b>.btn.b_add</b></button>
-            <button type="button" class="btn b_sub"><b>.btn.b_sub</b></button>
-            <button type="button" class="btn b_down"><b>.btn.b_down</b></button>
-          </div>
-          <div class="g_cont">
-             <h3 class="ui_h3">ICON BUTTONS</h3>
-            <button type="button" class="btn_search type2">검색</button>
-          </div>
-        </div>
-        <div class="g_right">
-          <div class="g_cont">
-             <h3 class="ui_h3">TAB</h3>
-            <p class="mt20 mb5">.tabs1</p>
-            <div class="tabs1">
-              <button type="button" class="tab on">TAB01</button>
-              <button type="button" class="tab">TAB02</button>
-            </div>
-            <p class="mt20 mb5">.tabs2</p>
-            <div class="tabs2">
-              <button type="button" class="tab on">TAB01</button>
-              <button type="button" class="tab">TAB02</button>
-              <button type="button" class="tab">TAB03</button>
-              <button type="button" class="tab">TAB04</button>
-            </div>
-            <p class="mt20 mb5">.tabs3</p>
-            <div class="tabs3">
-              <button type="button" class="tab">TAB01</button>
-              <button type="button" class="tab on">TAB02</button>
-              <button type="button" class="tab">TAB03</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="g_bx" id="g_bx1">
-       <h3 class="ui_h2">🎯 Input 가이드</h2>
-      <div class="col2">
-        <div class="g_left">
-          <div class="g_cont">
-             <h3 class="ui_h3">Input</h3>
-            <p class="mb15">
-              Input components : 기본 가로사이즈 100%, data.width로 가로값 조정
-              가능<br/>
-              id를 넣으면, label도 이용가능
-            </p>
-            <InputBox
-              :data="{ type: 'text', id: 'id', placeholder: '입력해 주세요.' }"
-            />
-            <InputBox
-              :data="{
-                type: 'text',
-                placeholder: '입력해주세요',
-                width: '150px',
-              }"
-            />
-            <InputBox
-              :data="{ type: 'text', placeholder: '비활성화', disabled: true }"
-            />
-            <InputBox
-              :data="{
-                shape: 'search',
-                type: 'text',
-                placeholder: '검색어를 입력하세요.',
-              }"
-            />
-            <InputBox
-              :data="{
-                shape: 'search',
-                type: 'text',
-                placeholder: '검색어를 입력하세요.',
-                disabled: true,
-              }"
-            />
-            <InputBox
-              :data="{ shape: 'file', placeholder: '파일을 선택하세요.' }"
-            />
-            <InputBox
-              :data="{
-                shape: 'file',
-                placeholder: '파일을 선택하세요.',
-                disabled: true,
-              }"
-            />
-          </div>
-          <div class="g_cont">
-             <h3 class="ui_h3">Textarea</h3>
-            <p class="mb10">
-              .textarea : 기본너비 :100%, 기본높이: 90px<br/>
-              inline-style 로 가로, 세로 조정가능
-            </p>
-            <textarea class="textarea" placeholder="입력해주세요!"></textarea>
-            <textarea
-              class="textarea"
-              style="width: 50%; height: 50px"
-              placeholder="입력해주세요!"
-            ></textarea>
-          </div>
-        </div>
-        <div class="g_right">
-          <div class="g_cont">
-             <h3 class="ui_h3">Check Box</h3>
-            <p>CheckBox components</p>
-            <CheckBox
-              :data="{
-                title: '<b>아이디기억하기</b>',
-                id: '1',
-              }"
-            />
-            <CheckBox
-              :data="{
-                title: '<b>비활성화</b>',
-                id: '2',
-                checked:true,
-                disabled: true,
-              }"
-            />
-            <h3 class="mt20">Radio Box</h3>
-            <p>RadioBox components</p>
-            <RadioBox
-              :data="{
-                title: '라디오버튼1',
-                // title:'<b>라디오버튼1</b>',
-                id: 1,
-                name: 'radio',
-              }"
-            />
-            <RadioBox
-              :data="{
-                title: '라디오버튼2',
-                // title:'<b>라디오버튼 비활성화</b>',
-                id: 2,
-                name: 'radio',
-              }"
-            />
-            <RadioBox
-              :data="{
-                title: '라디오버튼 비활성화',
-                // title:'<b>라디오버튼 비활성화</b>',
-                id: 3,
-                name: 'radio',
-                disabled: true,
-              }"
-            />
-            <RadioBox
-              :data="{
-                title: '라디오버튼 비활성화',
-                // title:'<b>라디오버튼 비활성화</b>',
-                id: 3,
-                name: 'radio',
-                disabled: true,
-                checked:true,
-              }"
-            />
-          </div>
-        </div>
-      </div>
-    </article>
-    <article class="g_bx" id="g_bx1">
-       <h3 class="ui_h2">🎯 팝업 가이드</h2>
-      <div class="col2">
-        <div class="g_left">
-          <div class="g_cont">
-            <p class="mb15">
-              * 팝업 컴포먼트 사용시 부모요소로 꼭 &lt;transition ...&gt;를 녛어주세요.<br/>
-              transition 태그로 에니메션 추가
-            </p>
-            <button type="button" class="btn" @click="fnOpenPop(1)">
-              상품 등록 팝업
-            </button>
-            <button type="button" class="btn" @click="fnOpenPop(4)">
-              상담내역 팝업
-            </button>
-            <button type="button" class="btn" @click="fnOpenPop(5)">
-              상담내역2 팝업 
-            </button>
-            <button type="button" class="btn" @click="fnOpenPop(6)">
-              상담내역3 팝업 <em class="new">new</em>
-            </button>
-            <button type="button" class="btn" @click="fnOpenPop(2)">
-              경고창
-            </button>
-            <button type="button" class="btn" @click="fnOpenPop(3)">
-              확인창
-            </button>
-            <transition 
-              name="custom-classes-transition"
-              enter-active-class="animate__animated animate__fadeIn"
-              leave-active-class="animate__animated animate__fadeOut">
-              <CreatePop  v-if="$store.state.ui.popCreateState == true" :key="$store.state.ui.popCreateState"/>
-              <CsPop  v-if="$store.state.ui.popCsState == true" :key="$store.state.ui.popCsState"/>
-              <Cs2Pop  v-if="$store.state.ui.popCs2State == true" :key="$store.state.ui.popCsS2tate"/>
-              <Cs3Pop  v-if="$store.state.ui.popCs3State == true" :key="$store.state.ui.popCsS3tate"/>
-            </transition>
-          </div>
-        </div>
-        <div class="g_right"></div>
-      </div>
-    </article> -->
   </div>
 </template>
 
