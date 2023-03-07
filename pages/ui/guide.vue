@@ -2,7 +2,8 @@
   <div class="ui_wrap ui_guide">
     <div class="ui_header">
       <h1 class="ui_h1"><strong>공통</strong> Guide Page</h1>
-      <p class="f14">해당가이드에 있는 클래스들은 2023년 01월 이후로 만들어진 모든 프로젝트에서 사용 가능합니다.</p>
+      <p class="f14">해당가이드에 있는 내용은 아래 css를 넣어주시면 사용가능합니다.</p>
+      <!-- <p class="f14">해당가이드에 있는 클래스들은 2023년 01월 이후로 만들어진 모든 프로젝트에서 사용 가능합니다.</p> -->
     </div>
     <section class="ui_container">
       <div class="ui_area_notice">
@@ -507,6 +508,11 @@
               <RadioBox label="라디오박스3" id="1" group="radi2" :disabled="true"/>
               <RadioBox label="라디오박스4" id="2"  group="radi2" :value="true" :disabled="true"/>
             </div>
+            <h3 class="ui_h3">툴팁 : .tooltip</h3>
+            <div class="g_cont">
+              <Tooltip type="?" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
+              <Tooltip type="!" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
+            </div>
             <h3 class="ui_h3">Scroll style</h3>
             <div class="flex_bw ui_scroll">
                 <div class="half scroll1">
@@ -536,20 +542,12 @@
       <section class="ui_area" id="ui_area3">
         <h2 class="ui_h2 mb20">🎯 팝업, 툴팁 가이드</h2>
         <div class="col2">
-          <div class="col">
-            <h3 class="ui_h3">툴팁 : .tooltip</h3>
-            <div class="g_cont" style="min-height:500px;">
-              <Tooltip type="?" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
-              <Tooltip type="!" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
-            </div>
+          <div class="col full">
             <h3 class="ui_h3">팝업</h3>
             <div class="g_cont">
               <span @click="fnShowPopup()">팝업창입니다.</span>
               <Popup v-if="$store.state.ui.popupData.state === true"/>
             </div>
-          </div>
-          <div class="col">
-
           </div>
         </div>
       </section>  
