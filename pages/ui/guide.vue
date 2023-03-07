@@ -1,15 +1,16 @@
 <template>
   <div class="ui_wrap ui_guide">
-    <header class="ui_header">
+    <div class="ui_header">
       <h1 class="ui_h1"><strong>공통</strong> Guide Page</h1>
-      <p class="f14">해당가이드에 있는 클래스들은 2023년 01월 이후로 만들어진 모든 프로젝트에서 사용 가능합니다.</p>
-    </header>
+      <p class="f14">해당가이드에 있는 내용은 아래 css를 넣어주시면 사용가능합니다.</p>
+      <!-- <p class="f14">해당가이드에 있는 클래스들은 2023년 01월 이후로 만들어진 모든 프로젝트에서 사용 가능합니다.</p> -->
+    </div>
     <section class="ui_container">
       <div class="ui_area_notice">
         <p><strong>적용 프로젝트 </strong> - 없음</p>
         <p>해등 스타일은 기본이니 각 프로젝트에 맞춰 덮어서 사용 부탁드립니다.</p>
       </div>
-      <article class="ui_area" id="ui_area1">
+      <section class="ui_area" id="ui_area1">
         <h2 class="ui_h2 mb5">🎯 스타일 가이드</h2>
         <p class="mb20">대부분에 태그에 box-sizing: border-box 적용되어 있음. <br/>단 가상요소(before,after)에는 직접 설정해야 함</p>
         <div class="col2">
@@ -128,6 +129,10 @@
             </div>
           </div>
           <div class="col">
+            <h3 class="ui_h3">text 정렬</h3>
+            <p class="mb10"><b>.left</b> - 왼쪽 정렬 </p>
+            <p class="mb10"><b>.center</b> - 가운데 정렬 </p>
+            <p class="mb10"><b>.right</b> - 오른쪽 정렬 </p>
             <h3 class="ui_h3">flex 정렬</h3>
             <div class="g_cont">
               <p class="mb10">디자인이 1줄일 때만 적용 가능</p>
@@ -151,13 +156,15 @@
                 <div class="item bg_gray">item3</div>
                 <div class="item bg_gray">item4</div>
               </div>
+              <p class="mb10"><b>.flex_a_center</b> - 세로 가운데 정렬</p>
               <div class="flex_a_center mt15">
                 <div class="item bg_gray">item1</div>
                 <div class="item bg_gray" style="height:50px;">item2</div>
                 <div class="item bg_gray">item3</div>
                 <div class="item bg_gray">item4</div>
               </div>
-              <div class="flex_a_end mt15 bg_gray"  style="height:50px;">
+              <p class="mb10"><b>.flex_a_end</b> - 세로 바닥 정렬</p>
+              <div class="flex_a_end mt15 bg_gray" style="height:50px;">
                 <div class="item">item1</div>
                 <div class="item">item2</div>
                 <div class="item">item3</div>
@@ -213,8 +220,8 @@
             </div>
           </div>
         </div>
-      </article>
-      <article class="ui_area" id="ui_area2">
+      </section>
+      <section class="ui_area" id="ui_area2">
         <h2 class="ui_h2 mb20">🎯 button, input 가이드</h2>
         <div class="col2">
           <div class="col">
@@ -443,6 +450,7 @@
                 생략<br/>
                 가로값은 기본 100% width에 px or %으로 넣으면 조정 가능
               </p>
+              <h5>.slct - 기본</h5>
               <Select defaultTitle="선택해주세요"
                 :itemList="[
                   { name: '셀렉트1' },
@@ -459,7 +467,7 @@
                   { name: '셀렉트3' },
                   { name: '셀렉트4' },
                 ]"/>
-              <h5>Select - 라우터 이동</h5>
+              <h5>.slct - 라우터 이동 (to 값)</h5>
               <Select defaultTitle="라우터" classNm="mt5"
               :itemList="[
                 // { name: '라우터1' , to:'/ui' , target:'_blank' },
@@ -469,7 +477,7 @@
                 { name: '라우터4' , to:'/ui' },
                 { name: '라우터5' , to:'/ui' },
               ]"/>
-              <h5>Select - 타 사이트 이동</h5>
+              <h5>.slct - 타 사이트 이동 (link 값)</h5>
               <Select defaultTitle="링크" classNm="mt5"
                 :itemList="[
                   { name: '링크1' , link:'https://www.naver.com/' , target:'_blank' },
@@ -500,6 +508,11 @@
               <RadioBox label="라디오박스3" id="1" group="radi2" :disabled="true"/>
               <RadioBox label="라디오박스4" id="2"  group="radi2" :value="true" :disabled="true"/>
             </div>
+            <h3 class="ui_h3">툴팁 : .tooltip</h3>
+            <div class="g_cont">
+              <Tooltip type="?" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
+              <Tooltip type="!" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
+            </div>
             <h3 class="ui_h3">Scroll style</h3>
             <div class="flex_bw ui_scroll">
                 <div class="half scroll1">
@@ -525,27 +538,99 @@
               </div>
           </div>
         </div>
-      </article>
-      <article class="ui_area" id="ui_area2">
+      </section>
+      <section class="ui_area" id="ui_area3">
         <h2 class="ui_h2 mb20">🎯 팝업, 툴팁 가이드</h2>
         <div class="col2">
-          <div class="col">
-            <h3 class="ui_h3">툴팁 : .tooltip</h3>
-            <div class="g_cont" style="min-height:500px;">
-              <Tooltip type="?" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
-              <Tooltip type="!" desc="<p>ui 가이드 사용 안내<br/>블라블라 블라블라</p><p>ui 가이드 사용 안내<br/>블라블라 블라블라</p>"/>
-            </div>
+          <div class="col full">
             <h3 class="ui_h3">팝업</h3>
             <div class="g_cont">
               <button @click="fnShowPopup()">팝업창입니다.</button>
               <button @click="fnShowAlert()">알림창입니다.</button>   
             </div>
           </div>
-          <div class="col">
-
-          </div>
         </div>
-      </article>  
+      </section>  
+      <section class="ui_area" id="ui_area4">
+        <h2 class="ui_h2 mb20">🎯 테이블, 탭 등</h2>
+        <div class="col2 mt20">
+          <article class="col">
+            <h3 class="ui_h3">게시판 형식 테이블 .tbl</h3>
+            <p>
+              가로크기는 colgroup 으로 제어, 반응형일때는 퍼센트 또는 클래스로 제어<br/>
+              td,th에 <b>.right</b>, <b>.left</b>, <b>.center</b> 를 추가하여 정렬 가능<br/>
+              <b>th</b> : font 13px, <b>td</b> : font 14px
+            </p>
+            <table class="tbl mt20">
+              <colgroup>
+                <col width="7%">
+                <col width="">
+                <col width="10%">
+                <col width="10%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>no</th>
+                  <th>제목</th>
+                  <th>작성자</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="i in 3" :key="i">
+                  <td class="center">{{ i }}</td>
+                  <td>게시판 제목입니다</td>
+                  <td class="center">홍길동</td>
+                  <td class="center">999</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="ui_h3 mt20">게시판 형식 테이블 .tbl_form</h3>
+            <p>
+              가로크기는 colgroup 으로 제어, 반응형일때는 퍼센트 또는 클래스로 제어<br/>
+              td,th에 <b>.right</b>, <b>.left</b>, <b>.center</b> 를 추가하여 정렬 가능<br/>
+              <b>th</b> : font 13px, <b>td</b> : font 14px
+            </p>
+            <table class="tbl_form mt20">
+              <colgroup>
+                <col width="15%">
+                <col width="">
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>이름</th>
+                  <td><input type="text" class="ipt"></td>
+                </tr>
+                <tr>
+                  <th>이름</th>
+                  <td>홍길동</td>
+                </tr>
+                <tr v-for="i in 3" :key="i">
+                  <th>주소</th>
+                  <td>서울시 </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="col">
+            <h3 class="ui_h3 mt20">페이징 .pagination</h3>
+            <div class="pagination">
+              <nuxt-link to="" class="btn_start">맨앞</nuxt-link>
+              <nuxt-link to="" class="btn_prev">이전</nuxt-link>
+              <nuxt-link to="" class="num" v-for="i in 10" :key="i" :class="{'on' : i==2}">{{ i }}</nuxt-link>
+              <nuxt-link to="" class="btn_next">다음</nuxt-link>
+              <nuxt-link to="" class="btn_end">맨뒤</nuxt-link>
+            </div>
+            <h3 class="ui_h3 mt20">탭 .taps</h3>
+            <div class="taps">
+              <button type="button" class="tap">탭1</button>
+              <button type="button" class="tap on">탭2</button>
+              <button type="button" class="tap">탭3</button>
+              <button type="button" class="tap">탭4</button>
+            </div>
+          </article>
+        </div>
+      </section>
     </section>
 
     <!-- 

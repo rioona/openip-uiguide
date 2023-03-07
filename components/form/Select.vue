@@ -54,11 +54,13 @@ export default {
     },
     toggleSlct(e) {
       const slctList = document.getElementsByClassName("slct");
-			const target = e.target.parentNode;
-			const onState = target.classList.contains("on") ? true : false;
-			Array.prototype.forEach.call(slctList, item => item.classList.remove("on"));
-			if (!onState) target.classList.add("on");
-			else target.classList.remove("on");
+      const target = e.target.parentNode;
+      if(!target.classList.contains("dis")){
+        const onState = target.classList.contains("on") ? true : false;
+        Array.prototype.forEach.call(slctList, item => item.classList.remove("on"));
+        if (!onState) target.classList.add("on");
+        else target.classList.remove("on");
+      }
       // console.log(slctList);
       // Array.prototype.forEach.call(slctList, (item) =>
       //   item.classList.remove("on")
