@@ -72,7 +72,7 @@
       padding: 15px 20px;
       border-bottom: 1px solid border;
     }
-    .cont{
+    .msg{
       @include setCont(null, null, block, relative);
       @include font(15, 18);
       text-align: center;
@@ -137,6 +137,34 @@
         color: #2E79EB;
         font-weight: bold;
       }
+    }
+  }
+  .btns{
+    width: 100%;
+    height: 50px;
+    flex-shrink: 0;
+    // &.col2{
+    //   .col{
+    //     @include setCont(50%, 100%);
+    //     &+.col{
+    //       border-left: 1px solid #ddd;
+    //     }
+    //   }
+    // }
+    .col {
+      display: flex;
+      justify-content: center;
+    }
+    .btn{
+      // @include setCont(100%, 100%, flex);
+      // color: $white;
+      justify-content: center;
+      align-items: center;
+      // @include font(16, 1);
+      // border-top: 1px solid #ddd;
+      // &:hover{
+      //   opacity: 0.8;
+      // }
     }
   }
 }

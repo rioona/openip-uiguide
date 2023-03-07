@@ -537,8 +537,8 @@
             </div>
             <h3 class="ui_h3">팝업</h3>
             <div class="g_cont">
-              <span @click="fnShowPopup()">팝업창입니다.</span>
-              <Popup v-if="$store.state.ui.popupData.state === true"/>
+              <button @click="fnShowPopup()">팝업창입니다.</button>
+              <button @click="fnShowAlert()">알림창입니다.</button>   
             </div>
           </div>
           <div class="col">
@@ -785,7 +785,8 @@ import Select from "~/components/form/Select";
 import CheckBox from "~/components/form/CheckBox";
 import RadioBox from "~/components/form/RadioBox";
 import Tooltip from "~/components/common/Tooltip";
-import Popup from "~/components/common/Popup.vue";
+import Popup from "~/components/Popup.vue";
+import Alert from "~/components/Alert.vue"
 // import SelectSearch from "~/components/common/SelectSearch";
 // import CreatePop from "~/components/popup/Create";
 // import CsPop from "~/components/popup/Cs";
@@ -805,6 +806,7 @@ export default {
     RadioBox,
     Tooltip,
     Popup,
+    Alert,
     // InputBox,
     // SelectSearch,
     // CreatePop,
@@ -855,10 +857,29 @@ export default {
         state: true,
         type: 'popup',
         title: '<h3>제목</h3>',
-        cont: `<p>팝업창입니다.</p>`,
+        msg: `<p>팝업창입니다.</p>`,
       };
       this.$store.dispatch('ui/setPopupData', data);
     },
+    fnShowAlert() {
+      let data = {
+        state: true,
+        type: 'confirm',
+        title: '',
+        msg: `<p>알림창입니다.</p>`,
+        btns: [
+          {
+            name: "취소",
+            link: "cancel",
+          },
+          {
+            name: "확인",
+            link: "/",
+          },
+        ]
+      };
+      this.$store.dispatch('ui/setAlertData', data);
+    }
   },
 };
 </script>

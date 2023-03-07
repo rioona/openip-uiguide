@@ -4,7 +4,7 @@
       <button class="btn_close" @click="closePopup"></button>
       <div class="tit" v-html="data.title"></div>
       <div class="content">
-        <div class="cont" v-html="data.cont"></div>
+        <div class="msg" v-html="data.msg"></div>
       </div>
     </div>
   </div>

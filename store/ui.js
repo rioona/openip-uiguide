@@ -3,8 +3,19 @@ const DEFAULT_STATE = {
     state: false,
     type: null,
     title: null,
-    cont: null,
+    msg: null,
   },
+  alertData: {
+    state: false,
+    type: null,
+    title: null,
+    msg: null,
+    btn: {
+      link: '',
+      name: null,
+      fnName: null,
+    }
+  }
 };
 
 export default {
@@ -20,6 +31,9 @@ export default {
   actions: {
     setPopupData({ commit }, payload) {
       commit('UPDATE_STATE', { popupData: payload });
+    },
+    setAlertData({ commit }, payload) {
+      commit('UPDATE_STATE', { alertData: payload });
     },
   },
 };
