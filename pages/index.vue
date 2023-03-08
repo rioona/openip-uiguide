@@ -789,9 +789,6 @@ export default {
       }
     }
   }
-  .ui_link:hover{
-    text-decoration: underline;
-  }
   .ui_new{
     background-color: #FFB200;
     color: #ffffff;
