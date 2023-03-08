@@ -1,43 +1,23 @@
 <template>
-  <div class="popup" v-if="data !== null" :class=" data.type !== undefined ? data.type : 'alert'">
-    <div class="p_inner">
-      <div class="content">
-        <h2 v-html="data.title" v-if="data.title!== undefined"></h2>
-        <div class="msg" v-html="data.msg"></div>
+  <!-- type: alert(경고창), confirm (선택창, normal(제목+내용) -->
+  <div class="popup alert" :class="data.classNm" v-if="data !== null">
+    <div class="p_wrap">
+      <div class="p_top" v-if="data.type == 'normal'">
+        <h2 class="tit" v-html="data.title"></h2>
+        <button @click="fnClosePop" class="btn_ico b_close">닫기</button>
       </div>
-      <div class="btns" v-if="data.type==='alert'">
-        <button v-if="data.btn.link == undefined"
-                @click="closePopup" class="button">
-          <b>{{data.btn.name}}</b>
-        </button>
-        <button v-else-if="data.btn.func"
-                @click="data.btn.func"
-                class="button">
-          <b>{{data.btn.name == undefined? "-" : data.btn.name}}</b>
-        </button>
-        <nuxt-link v-else
-                   :to="data.btn.link"
-                   class="button">
-          <b>{{data.btn.name}}</b>
-        </nuxt-link>
+      <button v-if="data.classNm=='type1'" @click="fnClosePop" class="btn_ico b_close">닫기</button>
+      <div class="p_content" v-html="data.msg"></div>
+      <div class="p_bottom" v-if="data.type == 'alert' && data.classNm !='type1'">
+        <button v-if="data.btn.link == ''" @click="fnClosePop" class="btn">{{data.btn.name == undefined ? '확인':data.btn.name}}</button>
+        <nuxt-link v-else :to="data.btn.link" class="btn">{{data.btn.name}}</nuxt-link>
       </div>
-      <div class="btns col2" v-else>
-        <div class="col" v-for="(item, i) in data.btns" :key="i">
-          <button v-if="item.link=='cancel'"
-                  @click="closePopup"
-                  class="btn btn_point btn-lg" >
-            <b>{{item.name == undefined? "취소" : item.name}}</b>
-          </button>
-          <button v-else-if="item.func"
-                  @click="item.func"
-                  class="btn btn_point btn-lg">
-            <b>{{item.name == undefined? "-" : item.name}}</b>
-          </button>
-          <nuxt-link v-else
-                     :to="item.link == undefined?'':item.link"
-                     class="btn btn_point btn-lg" ><b>{{item.name}}</b>
-          </nuxt-link>
-        </div>
+      <div class="p_bottom" v-if="data.type == 'confirm'">
+        <button @click="fnClosePop" class="btn">취소</button>
+        <button v-if="data.btn.link == ''" @click="fnClosePop" class="btn">{{ data.btn.name }}</button>
+        <nuxt-link v-else :to="data.btn.link" class="btn">{{ data.btn.name }}</nuxt-link>
+        <!-- <nuxt-link :to="data.btn.link == undefined?'':data.btn.link" class="button"><span>{{data.btn.name}}</span></nuxt-link> -->
+        <!-- <nuxt-link :to="data.btn.link" class="btn"><span>{{data.btn.name}}</span></nuxt-link> -->
       </div>
     </div>
   </div>
@@ -55,21 +35,24 @@ export default {
   },
   mounted() {
     this.data = this.$store.state.ui.alertData;
-    this.$router.beforeEach((to, from, next) => {
-      this.closePopup();
+    //라우터 전환될 때 이벤트
+    $nuxt.$router.beforeEach((to, from, next) => {
+      this.fnClosePop();
       next();
     });
   },
   methods: {
-    closePopup(){
+    fnClosePop(){
       this.$store.dispatch('ui/setAlertData', {
-        state:false,
-        type: null,
+        state: false,
+        type: "alert",
         title: null,
         msg: null,
-        btn:{
-          link:'',
-          name:null,
+        classNm:null,
+        btn: {
+          link: '',
+          name: "확인",
+          fnName: null,
         }
       });
     },

@@ -51,45 +51,11 @@
           </tbody>
         </table>
       </div>
-      <!-- <div class="ui_tblgp">
-        <h3 class="ui_h3">팝업</h3>
-        <table class="ui_tbl">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>담당자</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><button @click="fnOpenPop(1)" class="ui_link">멀티팩터검색-팩터기준 팝업</button></td>
-              <td><span class="hwangbc ui_label">BC</span>황병철</td>
-              <td>22.12.30</td>
-            </tr>
-            <tr>
-              <td><button @click="fnOpenPop(2)" class="ui_link">기술진단_리포트_풀팝업</button></td>
-              <td><span class="parkrn ui_label">RN</span>박리나</td>
-              <td>22.1.3</td>
-            </tr>
-            <tr>
-              <td><button @click="fnOpenPop(3)" class="ui_link">기술진단_활용법_풀팝업</button></td>
-              <td><span class="parkrn ui_label">RN</span>박리나</td>
-              <td>22.1.3</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-// import Alert from '@/components/pop/Alert';
-// import Report from '@/components/pop/Report';
-// import Usage from '@/components/pop/Usage';
-// import Popup from "@/components/popup/Popup";
-//아래 팝업은 확인용으로 만들었습니다.
 
 export default {
   name:"index",

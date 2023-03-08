@@ -1,18 +1,13 @@
 const DEFAULT_STATE = {
-  popupData: {
-    state: false,
-    type: null,
-    title: null,
-    msg: null,
-  },
   alertData: {
     state: false,
-    type: null,
+    type: "alert",
     title: null,
     msg: null,
+    classNm:null,
     btn: {
       link: '',
-      name: null,
+      name: "확인",
       fnName: null,
     }
   }
@@ -29,9 +24,6 @@ export default {
     },
   },
   actions: {
-    setPopupData({ commit }, payload) {
-      commit('UPDATE_STATE', { popupData: payload });
-    },
     setAlertData({ commit }, payload) {
       commit('UPDATE_STATE', { alertData: payload });
     },
