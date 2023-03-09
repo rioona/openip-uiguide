@@ -1,13 +1,14 @@
 <template>
   <div class="ui_wrap ui_guide">
     <div class="ui_header">
-      <h1 class="ui_h1"><strong>공통</strong> Guide Page</h1>
+      <h1 class="ui_h1">유니콘랜치 공통 UI Guide</h1>
     </div>
     <section class="ui_container">
       <div class="ui_area_notice">
         <p class="f14">해당가이드에 있는 내용은 아래 css를 넣어주시면 어떤 프로젝트에서도 사용가능합니다.</p>
-        <p class="f14">https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/common.css</p>
-        <p class="f14">해등 스타일은 기본이니 각 프로젝트에 맞춰 덮어서 사용 부탁드립니다.</p>
+        <p class="f14"><b class="txt_blue">https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/common.css</b></p>
+        <p class="f14">Git : <a href="https://ap-northeast-2.console.aws.amazon.com/codesuite/codecommit/repositories/Openip-Ui/browse?region=ap-northeast-2" target="_blank"><b>ssh://git-codecommit.ap-northeast-2.amazonaws.com/v1/repos/Openip-Ui</b></a></p>
+        <p class="f14">해당 스타일은 기본이니 각 프로젝트에 맞춰 커스텀 하여 사용 부탁드립니다.</p>
       </div>
       <section class="ui_area" id="ui_area1">
         <h2 class="ui_h2 mb5">🎯 스타일 가이드</h2>
@@ -51,25 +52,28 @@
             </div>
             <h3 class="ui_h3">폰트 색상</h3>
             <div class="g_cont">
-              <span class="txt_black">.txt_black(검정) : #000</span><br/>
               <span
-                class="txt_white"
-                style="background: #aaa; display: inline-block"
-                >.txt_white (화이트) : #fff</span><br/>
-              <span class="txt_red">.txt_red(빨강) : #e02d1b</span><br/>
-              <span class="txt_blue">.txt_blue(파랑) : #2e59d9</span><br/>
-              <span class="txt_gray">.txt_gray(회색) : #666</span><br/>
+              class="txt_white"
+              style="background: #aaa; display: inline-block"
+              >.txt_white (화이트) : #fff</span><br/>
+              <span class="txt_black">.txt_black(검정) : #000</span><br/>
+              <span class="txt_gray">.txt_gray : #666</span><br/>
+              <span class="txt_blue">.txt_blue : #2e59d9</span><br/>
+              <span class="txt_sky">.txt_sky : #36b9cc</span><br/>
+              <span class="txt_green">.txt_green : #1cc88a</span><br/>
+              <span class="txt_red">.txt_red : #1cc88a</span><br/>
+              <span class="txt_org">.txt_org : #f6c23e</span><br/>
             </div>
             <h3 class="ui_h3">배경</h3>
             <div class="g_cont">
-              <span class="bg_white"> .bg_white : 배경 (흰색)</span><br/>
-              <span class="bg_black txt_white">.bg_black : 배경 (검정)</span><br/>
-              <span class="bg_gray txt_white">.bg_gray : 배경 (회색)</span><br/>
-              <span class="bg_blue txt_white">.bg_blue : 배경 (포인트)</span><br/>
-              <span class="bg_sky txt_white">.bg_sky : 배경 (파랑)</span><br/>
-              <span class="bg_green txt_white">.bg_green : 배경 (그린)</span><br/>
-              <span class="bg_red txt_white">.bg_red : 배경 (빨강)</span><br/>
-              <span class="bg_org txt_white">.bg_org : 배경 (노랑)</span><br/>
+              <span class="bg_white"> .bg_white : #fff</span><br/>
+              <span class="bg_black txt_white">.bg_black : #000</span><br/>
+              <span class="bg_gray txt_white">.bg_gray : #eee</span><br/>
+              <span class="bg_blue txt_white">.bg_blue : #4e73df</span><br/>
+              <span class="bg_sky txt_white">.bg_sky : #36b9cc</span><br/>
+              <span class="bg_green txt_white">.bg_green : #1cc88a</span><br/>
+              <span class="bg_red txt_white">.bg_red : #1cc88a</span><br/>
+              <span class="bg_org txt_white">.bg_org : #f6c23e</span><br/>
             </div>
             <h3 class="ui_h3">텍스트 줄임(한줄)</h3>
             <div class="g_cont">
@@ -226,17 +230,15 @@
           <div class="col">
             <h3 class="ui_h3">버튼 : .btn - button, a태크에 사용</h3>
             <div class="g_cont">
-              <p class="mb10">최소 가로값 : 40px, 세로 : 30px, font : 14px</p>
+              
+              <div class="mb10"><button type="button" class="btn">.btn</button> 최소 가로값 : 40px, 세로 : 30px, font : 14px</div>
               <p class="mb10">.btn에 아래 속성들 추가로 적용 가능합니다.(중첩 가능)</p>
               <p class="mb10 ui_point">📌 Colors</p>
               <div class="mt10">
-                <button type="button" class="btn">.btn</button>
                 <button type="button" class="btn b_sky">.b_sky</button>
                 <button type="button" class="btn b_green">.b_green</button>
                 <button type="button" class="btn b_red">.b_red</button>
                 <button type="button" class="btn b_org">.b_org</button>
-              </div>
-              <div class="mt10">
                 <button type="button" class="btn b_gray">.b_gray</button>
                 <button type="button" class="btn b_black">.b_black</button>
               </div>
@@ -247,8 +249,6 @@
                 <nuxt-link to="" class="btn l_green">.l_green</nuxt-link>
                 <nuxt-link to="" class="btn l_red">.l_red</nuxt-link>
                 <nuxt-link to="" class="btn l_org">.l_org</nuxt-link>
-              </div>
-              <div class="mt10">
                 <nuxt-link to="" class="btn l_gray">.l_gray</nuxt-link>
                 <nuxt-link to="" class="btn l_black">.l_black</nuxt-link>
               </div>
@@ -657,6 +657,11 @@ export default {
     CheckBox,
     RadioBox,
     Tooltip,
+  },
+  head() {
+    return {
+      title:"공통 UI Guide",
+    };
   },
   mounted(){
   },

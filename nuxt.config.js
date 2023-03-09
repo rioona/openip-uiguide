@@ -48,7 +48,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: "stylesheet ", href: "https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/animate.min.css" },
       { rel: "stylesheet ", href: "https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/swiper.min.css" },
-      { rel: "stylesheet ", href: "https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/common.css" },
+      { rel: "stylesheet ", href: "https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/common.css?v=1" },
     ]
   },
   // css: ["~/static/scss/style.scss"],
