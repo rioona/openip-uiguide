@@ -2,8 +2,9 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  server: { port: 3001 },
   head: {
-    title: '프로젝트이름',
+    title: 'guide',
     meta: [
       { charset: 'utf-8' },
       //pc
