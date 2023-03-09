@@ -2,11 +2,11 @@
   <div class="ui_wrap ui_guide">
     <div class="ui_header">
       <h1 class="ui_h1"><strong>공통</strong> Guide Page</h1>
-      <!-- <p class="f14">해당가이드에 있는 클래스들은 2023년 01월 이후로 만들어진 모든 프로젝트에서 사용 가능합니다.</p> -->
     </div>
     <section class="ui_container">
       <div class="ui_area_notice">
-        <p class="f14">해당가이드에 있는 내용은 아래 css를 넣어주시면 사용가능합니다.</p>
+        <p class="f14">해당가이드에 있는 내용은 아래 css를 넣어주시면 어떤 프로젝트에서도 사용가능합니다.</p>
+        <p class="f14">https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/css/common.css</p>
         <p class="f14">해등 스타일은 기본이니 각 프로젝트에 맞춰 덮어서 사용 부탁드립니다.</p>
       </div>
       <section class="ui_area" id="ui_area1">
