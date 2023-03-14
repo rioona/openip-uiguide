@@ -871,3 +871,38 @@ table{
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
+
+.location{
+  margin-bottom: 54px;
+  li{
+    b{
+      @include setCont(7px, 7px, inline-block);
+      content: '';
+      border-radius: 5px;
+      background-color: $black;
+      opacity: .26;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+    a{
+      @include font(15, 18, $black, 400);
+      opacity: 0.5;
+      &.on{
+        opacity: 1;
+        font-weight: 500;
+      }
+    }
+    &:first-of-type{
+      a{
+        @include setCont(19px, 18px, block, relative);
+        @include bgSvg(icoHome($s_black), no-repeat, 50% 50%, 100%);
+        @include blind;
+        opacity: 1;
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
+}
+

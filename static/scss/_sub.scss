@@ -1,0 +1,94 @@
+.potfolio{
+  margin-top: 140px;
+  .a_search{
+    &>button{
+      @include font(35, 41, $gray, 500);
+      display: flex;
+      margin-bottom: 30px;
+      &:after{
+        @include setCont(34px, 34px, block, relative);
+        @include bgSvg(icoTapArrow($s_black), no-repeat, 50% 50%, 100%);
+        margin-left: 11px;
+        align-self: center;
+      }
+    }
+    .cont{
+      border: 1px solid #E0E0E0;
+      border-radius: 20px;
+      box-shadow: 0 5px 10px rgba(69, 136, 248, .15);
+      margin-bottom: 70px;
+      dl{
+        @include setCont(100%, auto, flex, relative);
+        border-bottom: 1px solid #E0E9FF;
+        padding: 10px 20px;
+        dt{
+          @include font(17, 20, $black, 500);
+          min-width: 156px;
+          margin: 7px;
+        }
+        dd{
+          .bx_chk{
+            margin: 7px;
+            label{
+              @include font(17, 20, #252525, 400);
+            }
+          } 
+        }
+      }
+      .btns{
+        @include setCont(100%, 59px, block, relative);
+        background-color: #F8FAFF;
+        border-radius: 0 0 20px 20px;
+        .b_reset{
+          @include font(17, 20, $black, 400);
+          display: flex;
+          padding: 20px;
+          &:after{
+            @include setCont(14px, 15px, block, relative);
+            @include bgSvg(icoRefrash($s_black), no-repeat, 50% 50%, 100%);
+            margin-left: 5px;
+            align-self: center;
+          }
+          &:hover{
+            color: $blue;
+            &:after{
+              @include bgSvg(icoRefrash($s_blue), no-repeat, 50% 50%, 100%);
+            }
+          }
+        }
+        .b_sarch{
+          @include setCont(90px, 40px, block, relative);
+          @include font(17, 20, $white, 400);
+          background-color: #939393;
+          box-shadow: 0 0 5px rgba(0, 0, 0, .16);
+          border-radius: 5px;
+          margin: 9px 23px;
+          &:hover{
+            background-color: $blue;
+          }
+        }
+      }
+    }
+  }
+  .a_top{
+    .taps{
+      @include setCont(100%, auto, block, relative);
+      border: none;
+      button{
+        @include font(35, 50, $black, 500);
+        position: relative;
+        opacity: .25;
+        padding: 0 10px;
+        margin-right: 39px;
+        border-bottom: 4px solid transparent;
+        &.on{
+          color: $blue;
+          opacity: 1;
+          border-bottom: 4px solid $blue;
+          box-sizing: border-box;
+        }
+      }
+      margin-bottom: 26px;
+    }
+  }
+}

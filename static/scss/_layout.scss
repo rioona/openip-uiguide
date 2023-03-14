@@ -6,8 +6,8 @@
   // transition: all 400ms ease;
 }
 .inner{
-  @include setCont(100%, null, block, relative);
-  max-width: $pc;
+  max-width: 1280px;
+  height: 100%;
   margin: 0 auto;
 }
 br{
