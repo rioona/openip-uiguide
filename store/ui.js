@@ -1,4 +1,5 @@
 const DEFAULT_STATE = {
+  url: "https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/openip/img",
   alertData: {
     state: false,
     type: "alert",

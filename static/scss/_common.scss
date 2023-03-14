@@ -450,7 +450,7 @@ input.ipt{
   min-width: 140px;
   height: 30px;
   text-align: left;
-  vertical-align: middle;
+  // vertical-align: middle;
   letter-spacing: 0;
   .s_tit {
     @include setCont(100%, 100%, block, relative, $white);
