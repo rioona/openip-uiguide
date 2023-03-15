@@ -28,9 +28,20 @@
         }
         dd{
           .bx_chk{
-            margin: 7px;
+            margin: 7px 10px;
             label{
               @include font(17, 20, #252525, 400);
+              &:before{
+                @include setCont(22px, 22px, block, absolute);
+                border: 1px solid #D0D0D0;
+                border-radius: 0;
+                left: -10px;
+              }
+            }
+            &:hover{
+              label{
+                color: $blue;
+              }
             }
           } 
         }
@@ -87,8 +98,133 @@
           border-bottom: 4px solid $blue;
           box-sizing: border-box;
         }
+        &:hover{
+          color: $blue;
+        }
       }
       margin-bottom: 26px;
+    }
+    .flex_bw{
+      margin-bottom: 30px;
+      p{
+        @include font(17, 20, $black, 400);
+        strong{
+          @include font(25, 30, $blue, 500);
+        }
+      }
+      .right{
+        .heart{
+          @include setCont(52px, 52px, block, relative);
+          @include bgSvg(icoHeart($s_gray, $s_white), no-repeat, 50% 50%, 20px auto);
+          @include blind;
+          min-width: 52px;
+          border: 1px solid $gray;
+          border-radius: 10px;
+          &:hover{
+            @include bgSvg(icoHeart($s_red, $s_red), no-repeat, 50% 50%, 20px auto);
+          }
+        }
+        .bx_search{
+          @include setCont(404px, 52px, flex, relative);
+          border: 1px solid $gray;
+          border-radius: 10px;
+          margin-left: 12px;
+          .ipt{
+            @include setCont(346px, 50px, block);
+            border-radius: 10px;
+            &::placeholder{
+              @include font(15, 18, #7E7E7E, 400);
+            }
+          }
+          .b_search{
+            @include setCont(50px, 50px, inline-block, relative);
+            @include bgSvg(icoSearch($s_black), no-repeat, 50% 50%, 20px auto);
+          }
+        }
+      }
+    }
+  }
+  .a_cont{
+    .list{
+      display: flex;
+      width: calc(100% + 46px);
+      flex-wrap: wrap;
+      .item{
+        @include setCont(404px, auto, block, relative);
+        margin-left: 34px;
+        margin-bottom: 50px;
+        &.item:nth-child(3n+4){
+          margin-left: 0px;
+        }
+        &.item:first-child{
+          margin-left: 0px;
+        }
+        .thumb{
+          @include setCont(404px, 260px, block, relative);
+          >span{
+            @include setCont(95px, 31px, block, absolute, $blue);
+            border-radius: 3px;
+            line-height: 31px;
+            right: 21px;
+            top: 21px;
+            text-align: center;
+            color: $white;
+          }
+          button{
+            @include setCont(100%, 100%, block, relative, #000);
+            background-color: rgba(0, 0, 0, 0.5);
+            min-width: 404px;
+            border-radius: 22px;
+            opacity: .30;
+            z-index: 10;
+            span{
+              @include setCont(248px, 58px, block, absolute);
+              @include font(15, 15, $white, 500);
+              line-height: 58px;
+              border-radius: 30px;
+              background-color: rgba(0, 0, 0, .8);
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        .i_cont{
+          padding: 0 13px;
+          p.tit{
+            @include font(20, 20, $black, 500);
+            margin-top: 20px;
+          }
+          span.ellipsis3{
+            @include font(15, 19, #5D5D5D, 400);
+            margin: 10px 0;
+          }
+          .btns{
+            margin-top: 10px;
+            .applica{
+              @include setCont(285px, 45px, block, relative);
+              @include font(15, 18, $black, 500);
+              border: 1px solid $black;
+              border-radius: 26px;
+              box-shadow: 3px 3px 5px rgba(0, 0, 0, .16);
+              &:hover{
+                background-color: #FCC135;
+                border: none;
+              }
+            }
+            .cart{
+              @include setCont(87px, 45px, block, relative);
+              @include bgSvg(icoCart($s_white), no-repeat, 50% 50%, 25px auto);
+              @include blind;
+              background-color: #CCCCCC;
+              border-radius: 26px;
+              &:hover{
+                background-color: $blue;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
